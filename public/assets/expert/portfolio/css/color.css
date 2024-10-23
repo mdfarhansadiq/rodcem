@@ -1,0 +1,284 @@
+body {
+    color: #818181
+}
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    color: #1e1a1a
+}
+.color_white, .color_white_a a {
+    color: #fff
+}
+.color_default {
+    color: #304a79
+}
+.color_primary {
+    color: #1e1a1a
+}
+.color_gray_a a{
+	color: #a5a5a5
+}
+.bg_gray {
+    background: #f5f5f5
+}
+.bg_primary {
+    background-color: #1e1a1a
+}
+
+.bg_default {
+    background-color: #304a79
+}
+.btn-primary{
+	background: #304a79;
+	border-color: #304a79
+}
+.btn-primary:hover {
+    border-color: #304a79;
+    color: #304a79 !important
+}
+.btn-white{
+	border-color: #fff
+}
+.btn-white:hover{
+	background-color: #fff;
+	color: #304a79
+}
+.line_double::before,
+.line_double::after {
+    background-color: #304a79
+}
+.line_left:before,
+.service_box_1:hover {
+    background: #304a79 !important
+}
+#scroll_to_top {
+    background-color: #000;
+    color: #fff
+}
+#contact.style_1 .side_title span{
+	color: #353c57
+}
+/*====================================================================
+Header Section Style Start
+====================================================================*/
+#header.fixed_header {
+    background-color: #1a1a1a
+}
+.navbar-light .navbar-nav .nav-link{
+	color: #fff
+}
+/* Header Style One*/
+.border_style_1 li.active:before,
+.border_style_1 li a.active:before{
+    border-color: #304a79 transparent transparent #304a79
+}
+.border_style_1 li.active:after,
+.border_style_1 li a.active:after{
+    border-color: transparent #304a79 #304a79 transparent
+}
+/* Header Style Two*/
+.header_style_2 .navbar-light .navbar-nav .nav-link:hover,
+.header_style_2 .navbar-light .navbar-nav .nav-link:focus,
+.header_style_2 .navbar-light .navbar-nav .nav-link.active{
+	color: #fff !important;
+	background-color: #304a79
+}
+.side_title span {
+	color: #ebebeb
+}
+/* Header Style Three*/
+.header_style_3 .navbar-light .navbar-nav .nav-link{
+	color: #1e1a1a
+}
+.header_style_3, #header.header_style_3.fixed_header {
+    background-color: #fff
+}
+.header_style_3 .navbar-expand-lg .navbar-nav .nav-link.active:before{
+	background: #304a79
+}
+/*====================================================================
+Text Color
+====================================================================*/
+.default-portfolio-item .overlay-box h6, .service_box_1:hover p,
+.service_box_1:hover i, .service_box_1:hover .btn_link, .nav-pills .nav-link.active i,
+#paricing.style_2 .btn-primary:hover {
+    color: #fff !important
+}
+.social ul li a, .social ul li i:hover, .btn_border:hover, .service_box_1 a:hover,
+.accordion .card-header .btn-link[aria-expanded="true"], .accordion .card-header:hover {
+    color: #fff
+}
+.text_area .sub_title, .pricing_box_2 .btn-primary {
+    color: #818181
+}
+.pricing_box .doller span, .experience .institute_name,
+.pricing_box_2 .title {
+    color: #a5a5a5
+}
+/* Default Color*/
+.footer_bottom .write a:hover, .service_box_1 i, 
+.gallery-section .filter-btns li.active,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link:hover, 
+.feature_box_1 .icon_img i, .portfolio_item_4 .icon_two i {
+    color: #304a79 !important
+}
+.btn_link, .one_box li, .pricing_box .doller, .tab_menu .nav-pills .nav-link i,
+.tab_menu .h5, .inner-content i, .working_box_1 i, .footer_info li i, .blog_info a:hover,
+.social_icon li a:hover, .text_block_4 i, .btn_border, .text_block_4 a:hover,
+.member_item a:hover, .pricing_box_2 i, .service_box_1 .icon_img i, .icon_default i,
+.blog-item-details blockquote::after, .name-date a {
+    color: #304a79
+}
+/* Primary Color*/
+.social ul li i, .accordion .card-header .btn-link, 
+.man_details tr td:first-child {
+    color: #1e1a1a
+}
+/*====================================================================
+Background Color
+====================================================================*/
+.bg_white, .social ul li i, .nav-pills .nav-link, .inner-content i,
+.pricing_box_2 .btn-primary,
+.accordion .card-header .btn-link {
+    background-color: #fff
+}
+.contact_message.style_4 .form-control{
+	background-color: #f5f5f5
+}
+.footer_bottom {
+    background: #fff
+}
+/* Default BG Color*/
+.social ul li i:hover, .nav-pills .nav-link.active, .line_center::before,
+#we_arrive::before, .accordion .card-header:hover, .btn_border:hover,
+.accordion .card-header .btn-link[aria-expanded="true"],
+.header_2 .navbar-nav .nav-item .nav-link:hover,
+.header_2 .navbar-nav .nav-item .nav-link.active,
+.service_box_1 .icon_img span, .round_border i,
+.feature_box_1 .icon_img span, .emergency_phone a,
+.service_box_1 .icon_img span, .feature_box_1 .icon_img span,
+.bullet_line_right.icon_img:after, .bullet_line_left.icon_img:after,
+.social_icon_3::before, .social_icon_3::after {
+	background-color: #304a79
+}
+
+/* Primary BG Color*/
+.footer_info li{
+	background-color: #1e1a1a
+}
+/*====================================================================
+RGB Color
+====================================================================*/
+.overlay_1::before {
+    background-color: rgba(15, 21, 44, 0.8)
+}
+.overlay_3::before, .background_image_1:after{
+	background-color: rgba(7, 22, 87, 0.5)
+}
+.default-portfolio-item .overlay-box {
+    background-color: rgba(255, 192, 21, 0.9)
+}
+
+/*====================================================================
+Border Color
+====================================================================*/
+.nav-pills .nav-item:after {
+    border-color: #818181
+}
+.about_image::after, .about_image::before, .working_box_1 i,
+.footer_info li i, .gallery-section.style_4 .filters li.active,
+.portfolio_item_2:hover .image-box, .btn_border,
+.header_4.fixed_header .navbar-expand-lg .navbar-nav .nav-link.active {
+    border-color: #304a79
+}
+.one_box li::after {
+    border-color: #818181
+}
+.form-control:focus, .pricing_box_2 .btn-primary {
+    border-color: #fff
+}
+.bullet_line_right.icon_img:after, .bullet_line_left.icon_img:after,
+.bullet_line_right.icon_img:before, .bullet_line_left.icon_img:before{
+	border-color: #ececec
+}
+.header_4.fixed_header .border_style_2 li .nav-link.active:before{
+    border-top-color: #1e1a1a;
+    border-bottom-color: #1e1a1a
+}
+.loader {
+	border-left: .8em solid #304a79;
+}
+/*====================================================================
+  Home page 2  Default Color
+====================================================================*/
+.service_box_2:hover .title, .service_box_2:hover p,
+.service_box_2:hover .btn-link,
+.portfolio_2 .gallery-section .filter-btns li.active,
+.pricing_box_2:hover i, .pricing_box_2:hover .title,
+.pricing_box_2:hover .doller, .pricing_box_2:hover p{
+	color: #fff !important
+}
+.service_box_2:hover [class^="flaticon-"]:before,
+.portfolio_item_2:hover .inner_title, .feedback_content i,
+.recent_contant a:hover{
+	color: #304a79
+}
+.service_box_2:hover{
+	background-color: #304a79 !important
+}
+.portfolio_2 .gallery-section .filter-btns li.active,
+.owl-carousel button.owl-dot.active, .pricing_box_2:hover{
+	background-color: #304a79
+}
+.line_down:before, .blog_posts.owl-carousel button.owl-dot.active{
+	background-color: #1e1a1a
+}
+.blog_posts.owl-carousel button.owl-dot{
+	background-color: #f3f3f4
+}
+.pricing_box_2 .btn-primary:hover {
+    background: #fff !important;
+    border-color: #fff;
+    color: #818181 !important
+}
+/*====================================================================
+    index 3 Color
+====================================================================*/
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #304a79 !important
+}
+.flat_default [class^="flaticon-"]:before, .write a:hover,
+.social a:hover, .process_item .inner_title:hover{
+	color: #304a79
+}
+.flat_primary [class^="flaticon-"]:before{
+	color: #1e1a1a !important
+}
+.bg_gray_2, .owl-carousel button.owl-dot {
+    background: #a5a5a5
+}
+.bg_gray_3{
+	background-color: #f7f7fa
+}
+.tab_menu_3 .nav-pills .nav-item .nav-link{
+	background-color: #1e1a1a
+}
+.nav-pills .nav-link.active{
+	background-color: #304a79 !important
+}
+.social ul li i:hover, #scroll_to_top:hover,
+.ball-scale-multiple > div, .progress-bar,.fact-counter .achive_icon, 
+.fact-counter .achive_icon:before, .fact-counter .achive_icon:after,
+#skills  span i, .testimonial_3:before, .owl-carousel button.owl-dot.active{
+	background: #304a79
+}
+#service.style_3 .service_box_3:hover, #process.style_3 .process_item span,
+#process.style_3 .process_item span sup, .footer_info li i {
+	border-color: #304a79
+}
+#education.style_3 .education .passing_year:before{
+	border-left-color: #304a79
+}
+
+

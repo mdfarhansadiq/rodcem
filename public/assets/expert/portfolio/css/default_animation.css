@@ -1,0 +1,82 @@
+a, [class^="flaticon-"]:before, .default-portfolio-item .overlay-box, .gallery-section .filter-btns li,
+.service_box_3, .member_item .overlay_1:before, .social li i, .news_item img, .pricing_box_2, .inner_title,
+.social_icon li i, .service_box_1, .pricing_box, .service_box_1 p, .service_box_2, .service_box_1 .fa,
+.portfolio_item_2 .image-box, .portfolio_item_2 img, .overlay_text, .member_item .social, .blog_item .blog_info {
+	-moz-transition: all 300ms ease-in-out 0s;
+	-webkit-transition: all 300ms ease-in-out 0s;
+	-o-transition: all 300ms ease-in-out 0s;
+	-ms-transition: all 300ms ease-in-out 0s;
+	transition: all 300ms ease-in-out 0s
+}
+.progress-bar{
+	-moz-transition: all 3000ms ease-in-out 0s;
+	-webkit-transition: all 3000ms ease-in-out 0s;
+	-o-transition: all 3000ms ease-in-out 0s;
+	-ms-transition: all 3000ms ease-in-out 0s;
+	transition: all 3000ms ease-in-out 0s
+}
+.xy_middle, .video-popup span, .preloader_area {
+	-moz-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%)
+}
+.section_title_3.center .line_left:before,
+.service_box_2 .shape {
+	-moz-transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%)
+}
+.line_left:before, .side_title span, #skills.style_3 .video_popup {
+	-moz-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%)
+}
+#process .process_item:nth-child(odd) span:before {
+	-moz-transform: rotate(30deg);
+	-webkit-transform: rotate(30deg);
+	-o-transform: rotate(30deg);
+	-ms-transform: rotate(30deg);
+	transform: rotate(30deg)
+}
+#process .process_item:nth-child(even) span:before {
+	-moz-transform: rotate(-30deg);
+	-webkit-transform: rotate(-30deg);
+	-o-transform: rotate(-30deg);
+	-ms-transform: rotate(-30deg);
+	transform: rotate(-30deg)
+}
+.working_box_1 i, .footer_info li i {
+	-moz-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg)
+}
+.working_box_1 i::before, .footer_info li i:before {
+	-moz-transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg)
+}
+.accordion .card-header .btn-link[aria-expanded="true"] i{
+	-moz-transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg)
+}
+.news_item:hover img,
+.portfolio_item_2:hover img {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    transform: scale(1.1);
+}

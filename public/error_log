@@ -1,0 +1,15 @@
+[26-Dec-2022 08:18:36 UTC] PHP Warning:  require(/home/psrmbdco/app.rodcem.com/Rod/vendor/autoload.php): Failed to open stream: No such file or directory in /home/psrmbdco/app.rodcem.com/index.php on line 34
+[26-Dec-2022 08:18:36 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/psrmbdco/app.rodcem.com/Rod/vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/psrmbdco/app.rodcem.com/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/psrmbdco/app.rodcem.com/index.php on line 34
+[26-Dec-2022 08:24:23 UTC] PHP Warning:  symlink(): File exists in /home/psrmbdco/app.rodcem.com/link.php on line 2
+[07-Apr-2023 23:14:39 Asia/Dhaka] PHP Fatal error:  Trait "Illuminate\Foundation\Auth\RegistersVendors" not found in /home/psrmbdco/rodcemApr1/app/Http/Controllers/Auth/CompanyRegisterController.php on line 13
+[07-Apr-2023 23:14:54 Asia/Dhaka] PHP Fatal error:  Trait "Illuminate\Foundation\Auth\RegistersVendors" not found in /home/psrmbdco/rodcemApr1/app/Http/Controllers/Auth/CompanyRegisterController.php on line 13
+[22-Apr-2023 23:02:30 Asia/Dhaka] PHP Fatal error:  Trait "Illuminate\Foundation\Auth\RegistersVendors" not found in /home/psrmbdco/rodcemApr1/app/Http/Controllers/Auth/CompanyRegisterController.php on line 13
+[25-Apr-2023 15:38:03 Asia/Dhaka] PHP Fatal error:  Trait "Illuminate\Foundation\Auth\RegistersVendors" not found in /home/psrmbdco/rodcemApr1/app/Http/Controllers/Auth/CompanyRegisterController.php on line 13
+[25-Apr-2023 15:39:14 Asia/Dhaka] PHP Fatal error:  Trait "Illuminate\Foundation\Auth\RegistersVendors" not found in /home/psrmbdco/rodcemApr1/app/Http/Controllers/Auth/CompanyRegisterController.php on line 13
+[27-Apr-2023 12:52:15 Asia/Dhaka] PHP Fatal error:  Trait "Illuminate\Foundation\Auth\RegistersVendors" not found in /home/psrmbdco/rodcemApr1/app/Http/Controllers/Auth/CompanyRegisterController.php on line 13
+[05-May-2023 14:20:04 Asia/Dhaka] PHP Fatal error:  Trait "Illuminate\Foundation\Auth\RegistersVendors" not found in /home/psrmbdco/rodcemApr1/app/Http/Controllers/Auth/CompanyRegisterController.php on line 13
+[14-Sep-2023 17:10:57 Asia/Dhaka] PHP Fatal error:  Trait "Illuminate\Foundation\Auth\RegistersVendors" not found in /home/psrmbdco/rodcemApr1/app/Http/Controllers/Auth/CompanyRegisterController.php on line 13
+[14-Sep-2023 17:11:22 Asia/Dhaka] PHP Fatal error:  Trait "Illuminate\Foundation\Auth\RegistersVendors" not found in /home/psrmbdco/rodcemApr1/app/Http/Controllers/Auth/CompanyRegisterController.php on line 13

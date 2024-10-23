@@ -1,0 +1,1440 @@
+{
+	"info": {
+		"_postman_id": "8691b81d-a63b-40c6-8dd7-aaf82138d29a",
+		"name": "construction_app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24702431"
+	},
+	"item": [
+		{
+			"name": "Login Company",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"company1@demo.com\",\r\n    \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/login/company",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"login",
+						"company"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Expert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"expert1@demo.com\",\r\n    \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/login/expert",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"login",
+						"expert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Profile Company",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiOWM5MmVkMmFjMWE5ZmM5NDZlNjI5ZWU1ZGMyNzc1ZWUzNWZhMTAwMGU4MDExMmU4NWZjMWE0YzkwNDVjZjMzMDVhYjVkOTdkY2JiOWUyZjYiLCJpYXQiOjE2NzI0NjUzNTMuNjgzMzAxLCJuYmYiOjE2NzI0NjUzNTMuNjgzMzA1LCJleHAiOjE3MDQwMDEzNTMuNTIyMDY3LCJzdWIiOiIxIiwic2NvcGVzIjpbImNvbXBhbmllcyJdfQ.TFt1Cv16eILYlDFpoknvWcpNrLzjUTgxYTtEjyayTHJ-Ci3mh8lLdrtKPGzAvYpRn8YVmgaLjx55MpaLl9QVxIZf_6BTmCTtb1ic8K6fiBUbsy8FfiagZdMYoFMQchiz7v9Ic3Wwcek1nZsmGRNHtt_W2QhiDn1rADJtI3HpycxVQd9xUNLo1RqAXv0qBsie916OBDFll9zm9P6WCyTJ1413cgnSu9sjtKMVqqAo92UcUf2fIywYSVWsbsnXPSa5rE_wD_-o6xf3S5Ad0AcHxoQTCKPlqXDvvbz_XDudy1yaNSo_uLnDf4Gs4RLmJbj5705QpYdqlIU_L64RFvaNP3hCl8vr1_zokhLcdxR0xr2zmJ9IffJwZVX1hVyvSDoZ0KAm_0WAXnkXLi5B8xT_cI_gsnNkVhadPg-7ekblOnkffr8vgTQTEF57OjPSBci3GUt-iYMgaqD2Z7lvajdljXe_7LpsyV-2WmHM6H19nyi7qm1zT4WF18iUXVzavO036rCOWTiGVfikRn2q1AacqHPqCwfJTCJ7oW8hO4IhzkyxV409yZRopgdAbCNyWrqUa70dXywTRfNev4f3Kx95CWs9RSkv16YsVQl9I05OL5sO5cC1mdjp3RhsnmtLfg3hVdYghNT6NdFpDvi29s48lr_wteFRnWOa18BFT0bOXig",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/company/profile",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"company",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Profile Expert",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNzk3NGNmMzMyNGI0OGYwYzZhYWMzMjg2YTZjZDk5MzQwNTNiMjQxYzA3ZDg0M2Q5ODA2MWZkZTA4YmRmNjRmZjlmY2I3NDM0NzdmYzAzOTQiLCJpYXQiOjE2NzMwMTk5MDEuMzk2MDkzLCJuYmYiOjE2NzMwMTk5MDEuMzk2MTAxLCJleHAiOjE3MDQ1NTU5MDEuMDAzNDExLCJzdWIiOiIxIiwic2NvcGVzIjpbImV4cGVydHMiXX0.Dh5LVZPxF0bznxO6m6XFFw3fSw_N2u4jZwbn2bKaBI7kdpmvjNneK4P4TjO_XKaA9Zn8gC1H7FZXouxuPihAiM7-gM3_cqlmD1mVbnDfMCoQ-biacaX2sWD7KUOopksoDktqB3PHlpZCn1ChBMWlEFSnye0zEVqpZx3V6vwogqEwWZ66i5wLjhiWWZcDfHep80E_dMvFyIMwq3GmRa4cuNRNyDAXETjt4ScR5kaZkiLJkWRQA3CN5zvCjVkhaV6VaunZgXKWxHUNhlGy03xhZkFVm11QZYLRvZlvaQHgD0uOvcRg1ZS73ivNj_BffXoxCiTNhUrjltnN5sq5TsydEmmDtyztp1hreDRDjcByRejdmD65XCN0KRZT3II5ytgOXQelr1Yki6_KebJc6que-aOWjvJDndcSq6IR17aJaqhDRAmpa6VU9ToDLpTg-CQH4FxxYgOujsPl4nI4nJDjlANEjn_YEzEFtxfveMz4mn6npQMEGXeNr1tRJwYYfDV7nCCVLtVAxTycIEupXkDYmDJsNsTgven25yNJyaMkgNbvlEWrLxH103-mrObMHMuVKML_SxDcv6vHqpDO-TNFlEY4cIYXD6xZatv__I84O3rNAZwBBgSlBwlRyIUx_gEFXQYd5V-82SVm_OUyrBs1rrp9I8c35RLKI-5j_U-DvaM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/expert/profile",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"expert",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Agent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"agent1@demo.com\",\r\n    \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/login/agent",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"login",
+						"agent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Profile Agent",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI1IiwianRpIjoiZWQwZTQ0OGQ5MWYwYTUxMjQ2NGMwYjg2MjllNGUxMzllZTAyODkwZjVhM2E3ZTRlOWIyZWFjYmQwMGU2ZDE3MDJhOWZmYjRkMWU0YzRkNjAiLCJpYXQiOjE2NzI0MTQ3OTIuNzM4ODM2LCJuYmYiOjE2NzI0MTQ3OTIuNzM4ODQ0LCJleHAiOjE3MDM5NTA3OTIuNjYzMTA2LCJzdWIiOiIyIiwic2NvcGVzIjpbImFnZW50cyJdfQ.eu9K5nhqWKPS70E5nvgT6rfEMmGjNPuuLP3tUtl6ivq_s_4nQ_A4yV67lAPn94nSFxHs0_rpI5TQGI4wqN6sGTzrBdZE21kZ0-i7AW-HuZRB5frC3a6dUpbWihpN7-xUfXVvxXoB2AplsTeQLmxeb0EtYFmwNS_o4J31MWAVHgNrOGdfD9aKqHzIhCUDsRKeRpDf_s5Pf54aFL8T32h1PZSdcb5S6wESDohrwGtRLISoM-wPPDSs0ypDRn2X7g-tOT-q8eXikKga8BmywTru3t49-5LvnP4-V2Ey_d_VJH3jDnQHXGVeJBaxDqjAV7BESRD1N1KJ0Zel1vD_U0NQWWwF0lVFFGUhtYsvL0Vp-Hjqq5X7YxdoctqDEkFZOAWj5e0MdG3UiOpmb6wvNEYTdPnVEJHF6rbhBjZMOYLhig4f-cV5PBn86xgbmYR6DKR3Uk__k-e1mXIoBLL_mmdwZ6gXbCCOqw_hPFUBVdFmnCJcFBrPa-cKdNfHvK8egwoGRtQTiPE15KeP4q7KUKaDU4jrMiC44yzxYmcAcZcuaNDaRMGhc2TgSJmwNPHfkBe5uvyLYixpp_oBC0d4UWXGAOOR2M6ccLQ7dUS93ljB17A7OPCUAGBsrNAcuGZUXRj08scVxjSK_Z7o39yL5A93hF6ftx_Mrz3eTU8FAaTrXbE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/agent/profile",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"agent",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"user1@demo.com\",\r\n    \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/login/user",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"login",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Profile User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI1IiwianRpIjoiODlkZjdmNDA1YWM2ODNjOGIxMDU2NDc1ZmVmMzI0ZmM1ZjBhNzgzNTkxMWVkOTc3NzYzNWI0NWNkMDczMWZjZDVhYTc2MWYzNjkyZTJmYmMiLCJpYXQiOjE2NzI0MTUwMTYuMjY2MzIzLCJuYmYiOjE2NzI0MTUwMTYuMjY2MzI3LCJleHAiOjE3MDM5NTEwMTYuMDQxMjY4LCJzdWIiOiIyIiwic2NvcGVzIjpbInVzZXJzIl19.UkCIbVl3oJhdFoQKO6vuZaOhI1i1I68-MaMDNVWzS4hZ-T8ks-OXIOeEkvn2BvfP54BAsTU9VnsDYO58BTCBxChga2Qehtmm6GE_wagTkUIlFKzjMrpHi-qsVK5BxjNL4SgjuFcxd9apX4H-AH4u-5w1A4f4_I77kDzaeCJSfleCUGNGJ7qzisLKRd1nBKdlS9kWbJFv9lBQjzAXW2zacZhqeWgx7-B6nuBkgot4mJrUAgKbY7ciaAp3hb7BOrebIh1tEuJ09mxLqjchsIHziCR9MA359Jw8j0Csa8X_y0Hq4oW1iAxOYnFGXWHfFqprEcQkJxh5bKyjxC1LIuNpLosKZ_73OiR6k36v8EMlGqb8UQQReWUhreU-gynmjN9MJiK94weXw9UQO20fnDxnF91AkrfmxCvC9wQfe-aAz7hmHGldczQElELmqbW6Dm_YTS3FM1yaZ_j_kAyBgxyLZagz8pAqgo0skWxfH_9RBW6p53kFcRtYYlThJQohXTgbmmn-Sq3zqPg5CnVKe_lDwfx9MktuL2EwRVNOg_PqHLMomqsPD836LrXEPs1RuiPwxUoioNZ8YVfJ2c2RgjNqyxzocBnSS9p6vK05RVWZQ28Yx8dFacS3tUldYCsTnRs0YUOjHvpu_YmAGFF1PNDn4drqVa8umMbf6t7r4Stxn9A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/user/profile",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"user",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Password Update Company",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI1IiwianRpIjoiYjE3MDRlOTIwNzllZDZiNTU1Y2M3ZDhjZmQzYjBlZGQwYmEwMzhiMmFlZTJiZWUwZGEzZDMxNzVjZTc2Y2EyOWNjZWRmY2E1MjZkMDRjYmIiLCJpYXQiOjE2NzI0MDU2NjMuMzY4ODY5LCJuYmYiOjE2NzI0MDU2NjMuMzY4ODczLCJleHAiOjE3MDM5NDE2NjMuMzMyNDQ2LCJzdWIiOiIxIiwic2NvcGVzIjpbImNvbXBhbmllcyJdfQ.DlwLRb5Hak4t_DNSEH1cL98Vy7uh5cJvt7Dnx5IAXfSBJIdBsAGPIn1wWa3X_vl-pujrbGzvN3IGz_Mk05JXDPfqCm51OC-SPMmbxHXYMgCFCTvYKJQPoMNb7gZwIp7yctKJdufE1EwFcZsUQ9m60Kc2KHPM9dIgMSV5shcXI0DLx0DLtWW58g9HrFsvJ3Hgck-Ptgst6skzoZqzzbyH-zj7RmAa5qSdU6QfAu5uDmhxoPcRcnRwOv3brYMLtNYpmTaNh-1Xy7bsPDYXJkw4NzQu9-8TzSjnV0UoMltmRNyU15V_DCIUZmgOshuU5isnouMRsHjTrNRrIyh21f5WAzCS0G-rjxa9HNiylWalefmV-jitteHotTXo3-wPfGyQ1VcKbzD9Q_CP9d2QeF3cnMP8VJOHbHYzELeD_FsfLmHGYqyJrYNlQ3oqaQXy-s4FqQD_xzNuxz95EAwDeIZYkw_dGVwe7pbyS6GRWz3pkRQn6Nhoyksdl76p0TBg9_hw9t-Lo7lPFtq8zjCfYkP6Ckn-nzgMuqQcEZbdHNGUqdCfp0hJAI6qGcG3_rgVEwPma7xPczHPjWh_gs9KMfE5iJv4SLyQ23Tqe9VU_HVA1aIajqkxLFNaV_67gJ6c6YDnzTxmarXLyVQHJXx-E73hx5RAMVrsX2leHTWTkRvG9bo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"old_password\": \"12345678\",\r\n    \"new_password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/company/update-password",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"company",
+						"update-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Password Update Agent",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI1IiwianRpIjoiYjE3MDRlOTIwNzllZDZiNTU1Y2M3ZDhjZmQzYjBlZGQwYmEwMzhiMmFlZTJiZWUwZGEzZDMxNzVjZTc2Y2EyOWNjZWRmY2E1MjZkMDRjYmIiLCJpYXQiOjE2NzI0MDU2NjMuMzY4ODY5LCJuYmYiOjE2NzI0MDU2NjMuMzY4ODczLCJleHAiOjE3MDM5NDE2NjMuMzMyNDQ2LCJzdWIiOiIxIiwic2NvcGVzIjpbImNvbXBhbmllcyJdfQ.DlwLRb5Hak4t_DNSEH1cL98Vy7uh5cJvt7Dnx5IAXfSBJIdBsAGPIn1wWa3X_vl-pujrbGzvN3IGz_Mk05JXDPfqCm51OC-SPMmbxHXYMgCFCTvYKJQPoMNb7gZwIp7yctKJdufE1EwFcZsUQ9m60Kc2KHPM9dIgMSV5shcXI0DLx0DLtWW58g9HrFsvJ3Hgck-Ptgst6skzoZqzzbyH-zj7RmAa5qSdU6QfAu5uDmhxoPcRcnRwOv3brYMLtNYpmTaNh-1Xy7bsPDYXJkw4NzQu9-8TzSjnV0UoMltmRNyU15V_DCIUZmgOshuU5isnouMRsHjTrNRrIyh21f5WAzCS0G-rjxa9HNiylWalefmV-jitteHotTXo3-wPfGyQ1VcKbzD9Q_CP9d2QeF3cnMP8VJOHbHYzELeD_FsfLmHGYqyJrYNlQ3oqaQXy-s4FqQD_xzNuxz95EAwDeIZYkw_dGVwe7pbyS6GRWz3pkRQn6Nhoyksdl76p0TBg9_hw9t-Lo7lPFtq8zjCfYkP6Ckn-nzgMuqQcEZbdHNGUqdCfp0hJAI6qGcG3_rgVEwPma7xPczHPjWh_gs9KMfE5iJv4SLyQ23Tqe9VU_HVA1aIajqkxLFNaV_67gJ6c6YDnzTxmarXLyVQHJXx-E73hx5RAMVrsX2leHTWTkRvG9bo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"old_password\": \"12345678\",\r\n    \"new_password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/agent/update-password",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"agent",
+						"update-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Password Update User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI1IiwianRpIjoiYjE3MDRlOTIwNzllZDZiNTU1Y2M3ZDhjZmQzYjBlZGQwYmEwMzhiMmFlZTJiZWUwZGEzZDMxNzVjZTc2Y2EyOWNjZWRmY2E1MjZkMDRjYmIiLCJpYXQiOjE2NzI0MDU2NjMuMzY4ODY5LCJuYmYiOjE2NzI0MDU2NjMuMzY4ODczLCJleHAiOjE3MDM5NDE2NjMuMzMyNDQ2LCJzdWIiOiIxIiwic2NvcGVzIjpbImNvbXBhbmllcyJdfQ.DlwLRb5Hak4t_DNSEH1cL98Vy7uh5cJvt7Dnx5IAXfSBJIdBsAGPIn1wWa3X_vl-pujrbGzvN3IGz_Mk05JXDPfqCm51OC-SPMmbxHXYMgCFCTvYKJQPoMNb7gZwIp7yctKJdufE1EwFcZsUQ9m60Kc2KHPM9dIgMSV5shcXI0DLx0DLtWW58g9HrFsvJ3Hgck-Ptgst6skzoZqzzbyH-zj7RmAa5qSdU6QfAu5uDmhxoPcRcnRwOv3brYMLtNYpmTaNh-1Xy7bsPDYXJkw4NzQu9-8TzSjnV0UoMltmRNyU15V_DCIUZmgOshuU5isnouMRsHjTrNRrIyh21f5WAzCS0G-rjxa9HNiylWalefmV-jitteHotTXo3-wPfGyQ1VcKbzD9Q_CP9d2QeF3cnMP8VJOHbHYzELeD_FsfLmHGYqyJrYNlQ3oqaQXy-s4FqQD_xzNuxz95EAwDeIZYkw_dGVwe7pbyS6GRWz3pkRQn6Nhoyksdl76p0TBg9_hw9t-Lo7lPFtq8zjCfYkP6Ckn-nzgMuqQcEZbdHNGUqdCfp0hJAI6qGcG3_rgVEwPma7xPczHPjWh_gs9KMfE5iJv4SLyQ23Tqe9VU_HVA1aIajqkxLFNaV_67gJ6c6YDnzTxmarXLyVQHJXx-E73hx5RAMVrsX2leHTWTkRvG9bo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"old_password\": \"12345678\",\r\n    \"new_password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/user/update-password",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"user",
+						"update-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register Company",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Company 2",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "company2@demo.com",
+							"type": "text"
+						},
+						{
+							"key": "phone_number",
+							"value": "01811111778",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "document",
+							"type": "file",
+							"src": "/C:/Users/sumuh/Downloads/demo.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/register/company",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"register",
+						"company"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register Expert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Expert  1",
+							"description": " ",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "expert1@demo.com",
+							"type": "text"
+						},
+						{
+							"key": "phone_number",
+							"value": "01671626142",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "document",
+							"type": "file",
+							"src": "/C:/Users/sumuh/Downloads/1668533365_demo.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/register/expert",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"register",
+						"expert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register Agent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Agent 2",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "agent2@demo.com",
+							"type": "text"
+						},
+						{
+							"key": "phone_number",
+							"value": "01811111112",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "document",
+							"type": "file",
+							"src": "/C:/Users/sumuh/Downloads/demo.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/register/agent",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"register",
+						"agent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Company two",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "company2@demo.com",
+							"type": "text"
+						},
+						{
+							"key": "phone_number",
+							"value": "01811111111",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "dob",
+							"value": "2022-10-18",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "Male",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "Dhaka",
+							"type": "text"
+						},
+						{
+							"key": "document",
+							"type": "file",
+							"src": "/C:/Users/sumuh/Downloads/1668533365_demo.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/register/user",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"register",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Units",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiOWM5MmVkMmFjMWE5ZmM5NDZlNjI5ZWU1ZGMyNzc1ZWUzNWZhMTAwMGU4MDExMmU4NWZjMWE0YzkwNDVjZjMzMDVhYjVkOTdkY2JiOWUyZjYiLCJpYXQiOjE2NzI0NjUzNTMuNjgzMzAxLCJuYmYiOjE2NzI0NjUzNTMuNjgzMzA1LCJleHAiOjE3MDQwMDEzNTMuNTIyMDY3LCJzdWIiOiIxIiwic2NvcGVzIjpbImNvbXBhbmllcyJdfQ.TFt1Cv16eILYlDFpoknvWcpNrLzjUTgxYTtEjyayTHJ-Ci3mh8lLdrtKPGzAvYpRn8YVmgaLjx55MpaLl9QVxIZf_6BTmCTtb1ic8K6fiBUbsy8FfiagZdMYoFMQchiz7v9Ic3Wwcek1nZsmGRNHtt_W2QhiDn1rADJtI3HpycxVQd9xUNLo1RqAXv0qBsie916OBDFll9zm9P6WCyTJ1413cgnSu9sjtKMVqqAo92UcUf2fIywYSVWsbsnXPSa5rE_wD_-o6xf3S5Ad0AcHxoQTCKPlqXDvvbz_XDudy1yaNSo_uLnDf4Gs4RLmJbj5705QpYdqlIU_L64RFvaNP3hCl8vr1_zokhLcdxR0xr2zmJ9IffJwZVX1hVyvSDoZ0KAm_0WAXnkXLi5B8xT_cI_gsnNkVhadPg-7ekblOnkffr8vgTQTEF57OjPSBci3GUt-iYMgaqD2Z7lvajdljXe_7LpsyV-2WmHM6H19nyi7qm1zT4WF18iUXVzavO036rCOWTiGVfikRn2q1AacqHPqCwfJTCJ7oW8hO4IhzkyxV409yZRopgdAbCNyWrqUa70dXywTRfNev4f3Kx95CWs9RSkv16YsVQl9I05OL5sO5cC1mdjp3RhsnmtLfg3hVdYghNT6NdFpDvi29s48lr_wteFRnWOa18BFT0bOXig",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/company/unit",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"company",
+						"unit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Unit",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiOWM5MmVkMmFjMWE5ZmM5NDZlNjI5ZWU1ZGMyNzc1ZWUzNWZhMTAwMGU4MDExMmU4NWZjMWE0YzkwNDVjZjMzMDVhYjVkOTdkY2JiOWUyZjYiLCJpYXQiOjE2NzI0NjUzNTMuNjgzMzAxLCJuYmYiOjE2NzI0NjUzNTMuNjgzMzA1LCJleHAiOjE3MDQwMDEzNTMuNTIyMDY3LCJzdWIiOiIxIiwic2NvcGVzIjpbImNvbXBhbmllcyJdfQ.TFt1Cv16eILYlDFpoknvWcpNrLzjUTgxYTtEjyayTHJ-Ci3mh8lLdrtKPGzAvYpRn8YVmgaLjx55MpaLl9QVxIZf_6BTmCTtb1ic8K6fiBUbsy8FfiagZdMYoFMQchiz7v9Ic3Wwcek1nZsmGRNHtt_W2QhiDn1rADJtI3HpycxVQd9xUNLo1RqAXv0qBsie916OBDFll9zm9P6WCyTJ1413cgnSu9sjtKMVqqAo92UcUf2fIywYSVWsbsnXPSa5rE_wD_-o6xf3S5Ad0AcHxoQTCKPlqXDvvbz_XDudy1yaNSo_uLnDf4Gs4RLmJbj5705QpYdqlIU_L64RFvaNP3hCl8vr1_zokhLcdxR0xr2zmJ9IffJwZVX1hVyvSDoZ0KAm_0WAXnkXLi5B8xT_cI_gsnNkVhadPg-7ekblOnkffr8vgTQTEF57OjPSBci3GUt-iYMgaqD2Z7lvajdljXe_7LpsyV-2WmHM6H19nyi7qm1zT4WF18iUXVzavO036rCOWTiGVfikRn2q1AacqHPqCwfJTCJ7oW8hO4IhzkyxV409yZRopgdAbCNyWrqUa70dXywTRfNev4f3Kx95CWs9RSkv16YsVQl9I05OL5sO5cC1mdjp3RhsnmtLfg3hVdYghNT6NdFpDvi29s48lr_wteFRnWOa18BFT0bOXig",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Ton\",\r\n    \"symbol\": \"TN\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/company/unit",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"company",
+						"unit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Unit",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiOWM5MmVkMmFjMWE5ZmM5NDZlNjI5ZWU1ZGMyNzc1ZWUzNWZhMTAwMGU4MDExMmU4NWZjMWE0YzkwNDVjZjMzMDVhYjVkOTdkY2JiOWUyZjYiLCJpYXQiOjE2NzI0NjUzNTMuNjgzMzAxLCJuYmYiOjE2NzI0NjUzNTMuNjgzMzA1LCJleHAiOjE3MDQwMDEzNTMuNTIyMDY3LCJzdWIiOiIxIiwic2NvcGVzIjpbImNvbXBhbmllcyJdfQ.TFt1Cv16eILYlDFpoknvWcpNrLzjUTgxYTtEjyayTHJ-Ci3mh8lLdrtKPGzAvYpRn8YVmgaLjx55MpaLl9QVxIZf_6BTmCTtb1ic8K6fiBUbsy8FfiagZdMYoFMQchiz7v9Ic3Wwcek1nZsmGRNHtt_W2QhiDn1rADJtI3HpycxVQd9xUNLo1RqAXv0qBsie916OBDFll9zm9P6WCyTJ1413cgnSu9sjtKMVqqAo92UcUf2fIywYSVWsbsnXPSa5rE_wD_-o6xf3S5Ad0AcHxoQTCKPlqXDvvbz_XDudy1yaNSo_uLnDf4Gs4RLmJbj5705QpYdqlIU_L64RFvaNP3hCl8vr1_zokhLcdxR0xr2zmJ9IffJwZVX1hVyvSDoZ0KAm_0WAXnkXLi5B8xT_cI_gsnNkVhadPg-7ekblOnkffr8vgTQTEF57OjPSBci3GUt-iYMgaqD2Z7lvajdljXe_7LpsyV-2WmHM6H19nyi7qm1zT4WF18iUXVzavO036rCOWTiGVfikRn2q1AacqHPqCwfJTCJ7oW8hO4IhzkyxV409yZRopgdAbCNyWrqUa70dXywTRfNev4f3Kx95CWs9RSkv16YsVQl9I05OL5sO5cC1mdjp3RhsnmtLfg3hVdYghNT6NdFpDvi29s48lr_wteFRnWOa18BFT0bOXig",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/company/unit/2",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"company",
+						"unit",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Unit",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiOWM5MmVkMmFjMWE5ZmM5NDZlNjI5ZWU1ZGMyNzc1ZWUzNWZhMTAwMGU4MDExMmU4NWZjMWE0YzkwNDVjZjMzMDVhYjVkOTdkY2JiOWUyZjYiLCJpYXQiOjE2NzI0NjUzNTMuNjgzMzAxLCJuYmYiOjE2NzI0NjUzNTMuNjgzMzA1LCJleHAiOjE3MDQwMDEzNTMuNTIyMDY3LCJzdWIiOiIxIiwic2NvcGVzIjpbImNvbXBhbmllcyJdfQ.TFt1Cv16eILYlDFpoknvWcpNrLzjUTgxYTtEjyayTHJ-Ci3mh8lLdrtKPGzAvYpRn8YVmgaLjx55MpaLl9QVxIZf_6BTmCTtb1ic8K6fiBUbsy8FfiagZdMYoFMQchiz7v9Ic3Wwcek1nZsmGRNHtt_W2QhiDn1rADJtI3HpycxVQd9xUNLo1RqAXv0qBsie916OBDFll9zm9P6WCyTJ1413cgnSu9sjtKMVqqAo92UcUf2fIywYSVWsbsnXPSa5rE_wD_-o6xf3S5Ad0AcHxoQTCKPlqXDvvbz_XDudy1yaNSo_uLnDf4Gs4RLmJbj5705QpYdqlIU_L64RFvaNP3hCl8vr1_zokhLcdxR0xr2zmJ9IffJwZVX1hVyvSDoZ0KAm_0WAXnkXLi5B8xT_cI_gsnNkVhadPg-7ekblOnkffr8vgTQTEF57OjPSBci3GUt-iYMgaqD2Z7lvajdljXe_7LpsyV-2WmHM6H19nyi7qm1zT4WF18iUXVzavO036rCOWTiGVfikRn2q1AacqHPqCwfJTCJ7oW8hO4IhzkyxV409yZRopgdAbCNyWrqUa70dXywTRfNev4f3Kx95CWs9RSkv16YsVQl9I05OL5sO5cC1mdjp3RhsnmtLfg3hVdYghNT6NdFpDvi29s48lr_wteFRnWOa18BFT0bOXig",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Ton\",\r\n    \"symbol\": \"TN\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/company/unit/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"company",
+						"unit",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Categories",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiOWM5MmVkMmFjMWE5ZmM5NDZlNjI5ZWU1ZGMyNzc1ZWUzNWZhMTAwMGU4MDExMmU4NWZjMWE0YzkwNDVjZjMzMDVhYjVkOTdkY2JiOWUyZjYiLCJpYXQiOjE2NzI0NjUzNTMuNjgzMzAxLCJuYmYiOjE2NzI0NjUzNTMuNjgzMzA1LCJleHAiOjE3MDQwMDEzNTMuNTIyMDY3LCJzdWIiOiIxIiwic2NvcGVzIjpbImNvbXBhbmllcyJdfQ.TFt1Cv16eILYlDFpoknvWcpNrLzjUTgxYTtEjyayTHJ-Ci3mh8lLdrtKPGzAvYpRn8YVmgaLjx55MpaLl9QVxIZf_6BTmCTtb1ic8K6fiBUbsy8FfiagZdMYoFMQchiz7v9Ic3Wwcek1nZsmGRNHtt_W2QhiDn1rADJtI3HpycxVQd9xUNLo1RqAXv0qBsie916OBDFll9zm9P6WCyTJ1413cgnSu9sjtKMVqqAo92UcUf2fIywYSVWsbsnXPSa5rE_wD_-o6xf3S5Ad0AcHxoQTCKPlqXDvvbz_XDudy1yaNSo_uLnDf4Gs4RLmJbj5705QpYdqlIU_L64RFvaNP3hCl8vr1_zokhLcdxR0xr2zmJ9IffJwZVX1hVyvSDoZ0KAm_0WAXnkXLi5B8xT_cI_gsnNkVhadPg-7ekblOnkffr8vgTQTEF57OjPSBci3GUt-iYMgaqD2Z7lvajdljXe_7LpsyV-2WmHM6H19nyi7qm1zT4WF18iUXVzavO036rCOWTiGVfikRn2q1AacqHPqCwfJTCJ7oW8hO4IhzkyxV409yZRopgdAbCNyWrqUa70dXywTRfNev4f3Kx95CWs9RSkv16YsVQl9I05OL5sO5cC1mdjp3RhsnmtLfg3hVdYghNT6NdFpDvi29s48lr_wteFRnWOa18BFT0bOXig",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/company/category",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"company",
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Category",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiOWM5MmVkMmFjMWE5ZmM5NDZlNjI5ZWU1ZGMyNzc1ZWUzNWZhMTAwMGU4MDExMmU4NWZjMWE0YzkwNDVjZjMzMDVhYjVkOTdkY2JiOWUyZjYiLCJpYXQiOjE2NzI0NjUzNTMuNjgzMzAxLCJuYmYiOjE2NzI0NjUzNTMuNjgzMzA1LCJleHAiOjE3MDQwMDEzNTMuNTIyMDY3LCJzdWIiOiIxIiwic2NvcGVzIjpbImNvbXBhbmllcyJdfQ.TFt1Cv16eILYlDFpoknvWcpNrLzjUTgxYTtEjyayTHJ-Ci3mh8lLdrtKPGzAvYpRn8YVmgaLjx55MpaLl9QVxIZf_6BTmCTtb1ic8K6fiBUbsy8FfiagZdMYoFMQchiz7v9Ic3Wwcek1nZsmGRNHtt_W2QhiDn1rADJtI3HpycxVQd9xUNLo1RqAXv0qBsie916OBDFll9zm9P6WCyTJ1413cgnSu9sjtKMVqqAo92UcUf2fIywYSVWsbsnXPSa5rE_wD_-o6xf3S5Ad0AcHxoQTCKPlqXDvvbz_XDudy1yaNSo_uLnDf4Gs4RLmJbj5705QpYdqlIU_L64RFvaNP3hCl8vr1_zokhLcdxR0xr2zmJ9IffJwZVX1hVyvSDoZ0KAm_0WAXnkXLi5B8xT_cI_gsnNkVhadPg-7ekblOnkffr8vgTQTEF57OjPSBci3GUt-iYMgaqD2Z7lvajdljXe_7LpsyV-2WmHM6H19nyi7qm1zT4WF18iUXVzavO036rCOWTiGVfikRn2q1AacqHPqCwfJTCJ7oW8hO4IhzkyxV409yZRopgdAbCNyWrqUa70dXywTRfNev4f3Kx95CWs9RSkv16YsVQl9I05OL5sO5cC1mdjp3RhsnmtLfg3hVdYghNT6NdFpDvi29s48lr_wteFRnWOa18BFT0bOXig",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Category demo 2",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/sumuh/Downloads/1668533365_demo.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/company/category",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"company",
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Category",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiOWM5MmVkMmFjMWE5ZmM5NDZlNjI5ZWU1ZGMyNzc1ZWUzNWZhMTAwMGU4MDExMmU4NWZjMWE0YzkwNDVjZjMzMDVhYjVkOTdkY2JiOWUyZjYiLCJpYXQiOjE2NzI0NjUzNTMuNjgzMzAxLCJuYmYiOjE2NzI0NjUzNTMuNjgzMzA1LCJleHAiOjE3MDQwMDEzNTMuNTIyMDY3LCJzdWIiOiIxIiwic2NvcGVzIjpbImNvbXBhbmllcyJdfQ.TFt1Cv16eILYlDFpoknvWcpNrLzjUTgxYTtEjyayTHJ-Ci3mh8lLdrtKPGzAvYpRn8YVmgaLjx55MpaLl9QVxIZf_6BTmCTtb1ic8K6fiBUbsy8FfiagZdMYoFMQchiz7v9Ic3Wwcek1nZsmGRNHtt_W2QhiDn1rADJtI3HpycxVQd9xUNLo1RqAXv0qBsie916OBDFll9zm9P6WCyTJ1413cgnSu9sjtKMVqqAo92UcUf2fIywYSVWsbsnXPSa5rE_wD_-o6xf3S5Ad0AcHxoQTCKPlqXDvvbz_XDudy1yaNSo_uLnDf4Gs4RLmJbj5705QpYdqlIU_L64RFvaNP3hCl8vr1_zokhLcdxR0xr2zmJ9IffJwZVX1hVyvSDoZ0KAm_0WAXnkXLi5B8xT_cI_gsnNkVhadPg-7ekblOnkffr8vgTQTEF57OjPSBci3GUt-iYMgaqD2Z7lvajdljXe_7LpsyV-2WmHM6H19nyi7qm1zT4WF18iUXVzavO036rCOWTiGVfikRn2q1AacqHPqCwfJTCJ7oW8hO4IhzkyxV409yZRopgdAbCNyWrqUa70dXywTRfNev4f3Kx95CWs9RSkv16YsVQl9I05OL5sO5cC1mdjp3RhsnmtLfg3hVdYghNT6NdFpDvi29s48lr_wteFRnWOa18BFT0bOXig",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "New Category updated",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/sumuh/Downloads/1668533365_demo.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/company/category/2",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"company",
+						"category",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Category",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiOWM5MmVkMmFjMWE5ZmM5NDZlNjI5ZWU1ZGMyNzc1ZWUzNWZhMTAwMGU4MDExMmU4NWZjMWE0YzkwNDVjZjMzMDVhYjVkOTdkY2JiOWUyZjYiLCJpYXQiOjE2NzI0NjUzNTMuNjgzMzAxLCJuYmYiOjE2NzI0NjUzNTMuNjgzMzA1LCJleHAiOjE3MDQwMDEzNTMuNTIyMDY3LCJzdWIiOiIxIiwic2NvcGVzIjpbImNvbXBhbmllcyJdfQ.TFt1Cv16eILYlDFpoknvWcpNrLzjUTgxYTtEjyayTHJ-Ci3mh8lLdrtKPGzAvYpRn8YVmgaLjx55MpaLl9QVxIZf_6BTmCTtb1ic8K6fiBUbsy8FfiagZdMYoFMQchiz7v9Ic3Wwcek1nZsmGRNHtt_W2QhiDn1rADJtI3HpycxVQd9xUNLo1RqAXv0qBsie916OBDFll9zm9P6WCyTJ1413cgnSu9sjtKMVqqAo92UcUf2fIywYSVWsbsnXPSa5rE_wD_-o6xf3S5Ad0AcHxoQTCKPlqXDvvbz_XDudy1yaNSo_uLnDf4Gs4RLmJbj5705QpYdqlIU_L64RFvaNP3hCl8vr1_zokhLcdxR0xr2zmJ9IffJwZVX1hVyvSDoZ0KAm_0WAXnkXLi5B8xT_cI_gsnNkVhadPg-7ekblOnkffr8vgTQTEF57OjPSBci3GUt-iYMgaqD2Z7lvajdljXe_7LpsyV-2WmHM6H19nyi7qm1zT4WF18iUXVzavO036rCOWTiGVfikRn2q1AacqHPqCwfJTCJ7oW8hO4IhzkyxV409yZRopgdAbCNyWrqUa70dXywTRfNev4f3Kx95CWs9RSkv16YsVQl9I05OL5sO5cC1mdjp3RhsnmtLfg3hVdYghNT6NdFpDvi29s48lr_wteFRnWOa18BFT0bOXig",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/company/category/3",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"company",
+						"category",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Portfolios",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiMDgwZmFiYTEzOTNiMGE3NDhiOGMzOWEyZmFhYTczOTRjZWIxNTY1MzdkZmIwMmNkYTVhMWRmNmE4NzBlOTY5MGI3MWU0ZjhmZjg0YjczMGYiLCJpYXQiOjE2NzMwMTkzMDMuNDE4MzQ5LCJuYmYiOjE2NzMwMTkzMDMuNDE4MzU1LCJleHAiOjE3MDQ1NTUzMDMuMjQwNTI1LCJzdWIiOiIxIiwic2NvcGVzIjpbImV4cGVydHMiXX0.smkehHQ5tpbisUHY3zD7HDsBHuNxbatdI-Uog_aRhNIlkQRdpI2opT3jXP6qlaoU8jER2-ha0xlX7BFOWz21jCjllA9kWet8fs3KMQr62ENIy7G-JNaI3hXTP_QytpVkn6wCVh5IVsqW2x6_C9D9XwR1ywejleJoEW67yuxatVCnYe10T5vwfKE_pTAYHZz7oLgP_JAdCnppSvCCizb9K9wMszA_cgah_dE9Qyy9HBFTGAETMns1S_EJaKPAl5jc4xmMChwmLIemlJYciY6BSpYOUOz83KAw7u3JcIRYmK83DMVvQFb-eP6NazJqcU0jiPScVtrKmJ9OHhjmyex5EMqD4GKaNnF1d-RnDJVBOraHR0ElnxrhRH7eBfOHpxyw-zqiHPjMIYouLKQLftwY-oL0CvvUS1OYvOCpN3VmEU554C96aSFEJA5C1URp67Hr8qrN188AhHNNt-qTnkT0pwKVEf85_keBgrBlJ3XF2-5WZuK5ZTTyywBLL75_zoJYGGfjTJaPZnDhmEwfhsrRj2Sg-5h6d1ra1irOQCj30OSN8Nekn_N1rh1w3SaSu2q92oG09dvKeRB_xUufwPzKzLwA46U4TE_Dxrhs2USOaQ_jlJk3hejrRKBfTgcn5vhysnmM8HUUVpNzX_I_LxEmbV__-wZzVjhqdQZpK8Tfsm8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/expert/portfolio",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"expert",
+						"portfolio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Portfolio",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiMDgwZmFiYTEzOTNiMGE3NDhiOGMzOWEyZmFhYTczOTRjZWIxNTY1MzdkZmIwMmNkYTVhMWRmNmE4NzBlOTY5MGI3MWU0ZjhmZjg0YjczMGYiLCJpYXQiOjE2NzMwMTkzMDMuNDE4MzQ5LCJuYmYiOjE2NzMwMTkzMDMuNDE4MzU1LCJleHAiOjE3MDQ1NTUzMDMuMjQwNTI1LCJzdWIiOiIxIiwic2NvcGVzIjpbImV4cGVydHMiXX0.smkehHQ5tpbisUHY3zD7HDsBHuNxbatdI-Uog_aRhNIlkQRdpI2opT3jXP6qlaoU8jER2-ha0xlX7BFOWz21jCjllA9kWet8fs3KMQr62ENIy7G-JNaI3hXTP_QytpVkn6wCVh5IVsqW2x6_C9D9XwR1ywejleJoEW67yuxatVCnYe10T5vwfKE_pTAYHZz7oLgP_JAdCnppSvCCizb9K9wMszA_cgah_dE9Qyy9HBFTGAETMns1S_EJaKPAl5jc4xmMChwmLIemlJYciY6BSpYOUOz83KAw7u3JcIRYmK83DMVvQFb-eP6NazJqcU0jiPScVtrKmJ9OHhjmyex5EMqD4GKaNnF1d-RnDJVBOraHR0ElnxrhRH7eBfOHpxyw-zqiHPjMIYouLKQLftwY-oL0CvvUS1OYvOCpN3VmEU554C96aSFEJA5C1URp67Hr8qrN188AhHNNt-qTnkT0pwKVEf85_keBgrBlJ3XF2-5WZuK5ZTTyywBLL75_zoJYGGfjTJaPZnDhmEwfhsrRj2Sg-5h6d1ra1irOQCj30OSN8Nekn_N1rh1w3SaSu2q92oG09dvKeRB_xUufwPzKzLwA46U4TE_Dxrhs2USOaQ_jlJk3hejrRKBfTgcn5vhysnmM8HUUVpNzX_I_LxEmbV__-wZzVjhqdQZpK8Tfsm8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Test title",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/sumuh/Downloads/1668533365_demo.jpg"
+						},
+						{
+							"key": "description",
+							"value": "Test description",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/expert/portfolio",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"expert",
+						"portfolio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Portfolio",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiMDgwZmFiYTEzOTNiMGE3NDhiOGMzOWEyZmFhYTczOTRjZWIxNTY1MzdkZmIwMmNkYTVhMWRmNmE4NzBlOTY5MGI3MWU0ZjhmZjg0YjczMGYiLCJpYXQiOjE2NzMwMTkzMDMuNDE4MzQ5LCJuYmYiOjE2NzMwMTkzMDMuNDE4MzU1LCJleHAiOjE3MDQ1NTUzMDMuMjQwNTI1LCJzdWIiOiIxIiwic2NvcGVzIjpbImV4cGVydHMiXX0.smkehHQ5tpbisUHY3zD7HDsBHuNxbatdI-Uog_aRhNIlkQRdpI2opT3jXP6qlaoU8jER2-ha0xlX7BFOWz21jCjllA9kWet8fs3KMQr62ENIy7G-JNaI3hXTP_QytpVkn6wCVh5IVsqW2x6_C9D9XwR1ywejleJoEW67yuxatVCnYe10T5vwfKE_pTAYHZz7oLgP_JAdCnppSvCCizb9K9wMszA_cgah_dE9Qyy9HBFTGAETMns1S_EJaKPAl5jc4xmMChwmLIemlJYciY6BSpYOUOz83KAw7u3JcIRYmK83DMVvQFb-eP6NazJqcU0jiPScVtrKmJ9OHhjmyex5EMqD4GKaNnF1d-RnDJVBOraHR0ElnxrhRH7eBfOHpxyw-zqiHPjMIYouLKQLftwY-oL0CvvUS1OYvOCpN3VmEU554C96aSFEJA5C1URp67Hr8qrN188AhHNNt-qTnkT0pwKVEf85_keBgrBlJ3XF2-5WZuK5ZTTyywBLL75_zoJYGGfjTJaPZnDhmEwfhsrRj2Sg-5h6d1ra1irOQCj30OSN8Nekn_N1rh1w3SaSu2q92oG09dvKeRB_xUufwPzKzLwA46U4TE_Dxrhs2USOaQ_jlJk3hejrRKBfTgcn5vhysnmM8HUUVpNzX_I_LxEmbV__-wZzVjhqdQZpK8Tfsm8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "Test title update",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Test description update x",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/sumuh/Downloads/1669026180_pexels-pixabay-268941.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/expert/portfolio/3",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"expert",
+						"portfolio",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Portfolio",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiMDgwZmFiYTEzOTNiMGE3NDhiOGMzOWEyZmFhYTczOTRjZWIxNTY1MzdkZmIwMmNkYTVhMWRmNmE4NzBlOTY5MGI3MWU0ZjhmZjg0YjczMGYiLCJpYXQiOjE2NzMwMTkzMDMuNDE4MzQ5LCJuYmYiOjE2NzMwMTkzMDMuNDE4MzU1LCJleHAiOjE3MDQ1NTUzMDMuMjQwNTI1LCJzdWIiOiIxIiwic2NvcGVzIjpbImV4cGVydHMiXX0.smkehHQ5tpbisUHY3zD7HDsBHuNxbatdI-Uog_aRhNIlkQRdpI2opT3jXP6qlaoU8jER2-ha0xlX7BFOWz21jCjllA9kWet8fs3KMQr62ENIy7G-JNaI3hXTP_QytpVkn6wCVh5IVsqW2x6_C9D9XwR1ywejleJoEW67yuxatVCnYe10T5vwfKE_pTAYHZz7oLgP_JAdCnppSvCCizb9K9wMszA_cgah_dE9Qyy9HBFTGAETMns1S_EJaKPAl5jc4xmMChwmLIemlJYciY6BSpYOUOz83KAw7u3JcIRYmK83DMVvQFb-eP6NazJqcU0jiPScVtrKmJ9OHhjmyex5EMqD4GKaNnF1d-RnDJVBOraHR0ElnxrhRH7eBfOHpxyw-zqiHPjMIYouLKQLftwY-oL0CvvUS1OYvOCpN3VmEU554C96aSFEJA5C1URp67Hr8qrN188AhHNNt-qTnkT0pwKVEf85_keBgrBlJ3XF2-5WZuK5ZTTyywBLL75_zoJYGGfjTJaPZnDhmEwfhsrRj2Sg-5h6d1ra1irOQCj30OSN8Nekn_N1rh1w3SaSu2q92oG09dvKeRB_xUufwPzKzLwA46U4TE_Dxrhs2USOaQ_jlJk3hejrRKBfTgcn5vhysnmM8HUUVpNzX_I_LxEmbV__-wZzVjhqdQZpK8Tfsm8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/expert/portfolio/3",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"expert",
+						"portfolio",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Products",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiOWM5MmVkMmFjMWE5ZmM5NDZlNjI5ZWU1ZGMyNzc1ZWUzNWZhMTAwMGU4MDExMmU4NWZjMWE0YzkwNDVjZjMzMDVhYjVkOTdkY2JiOWUyZjYiLCJpYXQiOjE2NzI0NjUzNTMuNjgzMzAxLCJuYmYiOjE2NzI0NjUzNTMuNjgzMzA1LCJleHAiOjE3MDQwMDEzNTMuNTIyMDY3LCJzdWIiOiIxIiwic2NvcGVzIjpbImNvbXBhbmllcyJdfQ.TFt1Cv16eILYlDFpoknvWcpNrLzjUTgxYTtEjyayTHJ-Ci3mh8lLdrtKPGzAvYpRn8YVmgaLjx55MpaLl9QVxIZf_6BTmCTtb1ic8K6fiBUbsy8FfiagZdMYoFMQchiz7v9Ic3Wwcek1nZsmGRNHtt_W2QhiDn1rADJtI3HpycxVQd9xUNLo1RqAXv0qBsie916OBDFll9zm9P6WCyTJ1413cgnSu9sjtKMVqqAo92UcUf2fIywYSVWsbsnXPSa5rE_wD_-o6xf3S5Ad0AcHxoQTCKPlqXDvvbz_XDudy1yaNSo_uLnDf4Gs4RLmJbj5705QpYdqlIU_L64RFvaNP3hCl8vr1_zokhLcdxR0xr2zmJ9IffJwZVX1hVyvSDoZ0KAm_0WAXnkXLi5B8xT_cI_gsnNkVhadPg-7ekblOnkffr8vgTQTEF57OjPSBci3GUt-iYMgaqD2Z7lvajdljXe_7LpsyV-2WmHM6H19nyi7qm1zT4WF18iUXVzavO036rCOWTiGVfikRn2q1AacqHPqCwfJTCJ7oW8hO4IhzkyxV409yZRopgdAbCNyWrqUa70dXywTRfNev4f3Kx95CWs9RSkv16YsVQl9I05OL5sO5cC1mdjp3RhsnmtLfg3hVdYghNT6NdFpDvi29s48lr_wteFRnWOa18BFT0bOXig",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/company/product",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"company",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiOWM5MmVkMmFjMWE5ZmM5NDZlNjI5ZWU1ZGMyNzc1ZWUzNWZhMTAwMGU4MDExMmU4NWZjMWE0YzkwNDVjZjMzMDVhYjVkOTdkY2JiOWUyZjYiLCJpYXQiOjE2NzI0NjUzNTMuNjgzMzAxLCJuYmYiOjE2NzI0NjUzNTMuNjgzMzA1LCJleHAiOjE3MDQwMDEzNTMuNTIyMDY3LCJzdWIiOiIxIiwic2NvcGVzIjpbImNvbXBhbmllcyJdfQ.TFt1Cv16eILYlDFpoknvWcpNrLzjUTgxYTtEjyayTHJ-Ci3mh8lLdrtKPGzAvYpRn8YVmgaLjx55MpaLl9QVxIZf_6BTmCTtb1ic8K6fiBUbsy8FfiagZdMYoFMQchiz7v9Ic3Wwcek1nZsmGRNHtt_W2QhiDn1rADJtI3HpycxVQd9xUNLo1RqAXv0qBsie916OBDFll9zm9P6WCyTJ1413cgnSu9sjtKMVqqAo92UcUf2fIywYSVWsbsnXPSa5rE_wD_-o6xf3S5Ad0AcHxoQTCKPlqXDvvbz_XDudy1yaNSo_uLnDf4Gs4RLmJbj5705QpYdqlIU_L64RFvaNP3hCl8vr1_zokhLcdxR0xr2zmJ9IffJwZVX1hVyvSDoZ0KAm_0WAXnkXLi5B8xT_cI_gsnNkVhadPg-7ekblOnkffr8vgTQTEF57OjPSBci3GUt-iYMgaqD2Z7lvajdljXe_7LpsyV-2WmHM6H19nyi7qm1zT4WF18iUXVzavO036rCOWTiGVfikRn2q1AacqHPqCwfJTCJ7oW8hO4IhzkyxV409yZRopgdAbCNyWrqUa70dXywTRfNev4f3Kx95CWs9RSkv16YsVQl9I05OL5sO5cC1mdjp3RhsnmtLfg3hVdYghNT6NdFpDvi29s48lr_wteFRnWOa18BFT0bOXig",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Product 2",
+							"type": "text"
+						},
+						{
+							"key": "unit_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "category_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/sumuh/Downloads/1668533365_demo.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/company/product",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"company",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiOWM5MmVkMmFjMWE5ZmM5NDZlNjI5ZWU1ZGMyNzc1ZWUzNWZhMTAwMGU4MDExMmU4NWZjMWE0YzkwNDVjZjMzMDVhYjVkOTdkY2JiOWUyZjYiLCJpYXQiOjE2NzI0NjUzNTMuNjgzMzAxLCJuYmYiOjE2NzI0NjUzNTMuNjgzMzA1LCJleHAiOjE3MDQwMDEzNTMuNTIyMDY3LCJzdWIiOiIxIiwic2NvcGVzIjpbImNvbXBhbmllcyJdfQ.TFt1Cv16eILYlDFpoknvWcpNrLzjUTgxYTtEjyayTHJ-Ci3mh8lLdrtKPGzAvYpRn8YVmgaLjx55MpaLl9QVxIZf_6BTmCTtb1ic8K6fiBUbsy8FfiagZdMYoFMQchiz7v9Ic3Wwcek1nZsmGRNHtt_W2QhiDn1rADJtI3HpycxVQd9xUNLo1RqAXv0qBsie916OBDFll9zm9P6WCyTJ1413cgnSu9sjtKMVqqAo92UcUf2fIywYSVWsbsnXPSa5rE_wD_-o6xf3S5Ad0AcHxoQTCKPlqXDvvbz_XDudy1yaNSo_uLnDf4Gs4RLmJbj5705QpYdqlIU_L64RFvaNP3hCl8vr1_zokhLcdxR0xr2zmJ9IffJwZVX1hVyvSDoZ0KAm_0WAXnkXLi5B8xT_cI_gsnNkVhadPg-7ekblOnkffr8vgTQTEF57OjPSBci3GUt-iYMgaqD2Z7lvajdljXe_7LpsyV-2WmHM6H19nyi7qm1zT4WF18iUXVzavO036rCOWTiGVfikRn2q1AacqHPqCwfJTCJ7oW8hO4IhzkyxV409yZRopgdAbCNyWrqUa70dXywTRfNev4f3Kx95CWs9RSkv16YsVQl9I05OL5sO5cC1mdjp3RhsnmtLfg3hVdYghNT6NdFpDvi29s48lr_wteFRnWOa18BFT0bOXig",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "_method",
+							"value": "PUT",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Product 2 updated",
+							"type": "text"
+						},
+						{
+							"key": "unit_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "category_id",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/sumuh/Downloads/1668533365_demo.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/company/product/2",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"company",
+						"product",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiOWM5MmVkMmFjMWE5ZmM5NDZlNjI5ZWU1ZGMyNzc1ZWUzNWZhMTAwMGU4MDExMmU4NWZjMWE0YzkwNDVjZjMzMDVhYjVkOTdkY2JiOWUyZjYiLCJpYXQiOjE2NzI0NjUzNTMuNjgzMzAxLCJuYmYiOjE2NzI0NjUzNTMuNjgzMzA1LCJleHAiOjE3MDQwMDEzNTMuNTIyMDY3LCJzdWIiOiIxIiwic2NvcGVzIjpbImNvbXBhbmllcyJdfQ.TFt1Cv16eILYlDFpoknvWcpNrLzjUTgxYTtEjyayTHJ-Ci3mh8lLdrtKPGzAvYpRn8YVmgaLjx55MpaLl9QVxIZf_6BTmCTtb1ic8K6fiBUbsy8FfiagZdMYoFMQchiz7v9Ic3Wwcek1nZsmGRNHtt_W2QhiDn1rADJtI3HpycxVQd9xUNLo1RqAXv0qBsie916OBDFll9zm9P6WCyTJ1413cgnSu9sjtKMVqqAo92UcUf2fIywYSVWsbsnXPSa5rE_wD_-o6xf3S5Ad0AcHxoQTCKPlqXDvvbz_XDudy1yaNSo_uLnDf4Gs4RLmJbj5705QpYdqlIU_L64RFvaNP3hCl8vr1_zokhLcdxR0xr2zmJ9IffJwZVX1hVyvSDoZ0KAm_0WAXnkXLi5B8xT_cI_gsnNkVhadPg-7ekblOnkffr8vgTQTEF57OjPSBci3GUt-iYMgaqD2Z7lvajdljXe_7LpsyV-2WmHM6H19nyi7qm1zT4WF18iUXVzavO036rCOWTiGVfikRn2q1AacqHPqCwfJTCJ7oW8hO4IhzkyxV409yZRopgdAbCNyWrqUa70dXywTRfNev4f3Kx95CWs9RSkv16YsVQl9I05OL5sO5cC1mdjp3RhsnmtLfg3hVdYghNT6NdFpDvi29s48lr_wteFRnWOa18BFT0bOXig",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/company/product/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"company",
+						"product",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Companies",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/get-companies",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"get-companies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Orders - Agent",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjEyMWY5MTNjMWY3ZWMyYmE2YzZhOWE1NTdmMDJhMjA5YWVmMGYzODZjNWI0YjlhNThjMDlhN2I5ZjU3MmNiODE1MzNlMWVhMmY0MTIxOTAiLCJpYXQiOjE2NzQ0OTA5MzguMDk0NTAxLCJuYmYiOjE2NzQ0OTA5MzguMDk0NTA1LCJleHAiOjE3MDYwMjY5MzcuODI1NTEzLCJzdWIiOiIxIiwic2NvcGVzIjpbImFnZW50cyJdfQ.ZH4MBxmVQiOVDzaeS2oEaOY_oDcrO0eOfbnnIL-i8v0xZJ1kvhk_nbkPfvPOy_ZBlRhk3Ds0a9Xms8SXUDKyzHRiE2bwjktxuFZP-01HtJae5HbV7c8_xB4ssW2ydNIUtz7u9jchC3Ydm8ht9-DPbe-ctEp6Epi04SO7s1ncPP8QsizLFIhWHLIkS0bdWeagP1JRmheM3P8nIc9dAMsG64YfY13HLUIE3EJjHZTeptb9U19BeHenLE9xn79xI7HxV8VoCer048dTLZdz48Q-RIdx3mRDI8tVtWe7TqymP-4uM3OCjQEOmcjNh0Afmi9tC5vQm22LJTAx_DgrRBuYjgdguZO4nypIuHOEqvzaRiSTfTYbfI5mEYjYuzl22aa-AwCZ_XRLvYjSA6EpKr9yWfb-enaxhA9XY0ra_pURthga4WK2Rz7INEqbN2Oq1R2Gmq3KQ7l1ow9rsZEij30pKZAka1Nt43J1PL-VSbWtu1SLb1MrIQm4TpNo0bXTlZqVbeT8n5XLR0A26N8_AVftX2eDSA6NwixdL7drTCt7ToT0hf1ftav6XQxH8SsT-jxuaaEq9cBl9uxTuArJjNqLdH7r5_XF4dZfWxcpqj2VuUzv5CLJMwPyi4S175gri5nMFRNzRqRQy4gjg2cMVn3r0t3Gn7FD_Ggvag4gQTMys_s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/agent/order",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"agent",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order create | Place order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYWViYjlkZTdhMjM2N2FlNzE3ZjRjNmUyZWIzZjQ0M2VmNDIwZmU2N2NkNjcxODYwZDBmOGU3NmY4ODEwMDkwNjAyYzczYmI0NzEzNTA3ODAiLCJpYXQiOjE2NzQ0MDU3MzcuNjYwOTk5LCJuYmYiOjE2NzQ0MDU3MzcuNjYxMDAzLCJleHAiOjE3MDU5NDE3MzcuNDE4NDgxLCJzdWIiOiIxIiwic2NvcGVzIjpbImFnZW50cyJdfQ.cCEPiZHag-Ye_ed1fHHMeFpJ5H2Ur6-HSCH_PDaAvz5JWtbr6sL25xsOV3clsEioea8FcE_UhEJ33BYYYPq6pqWzffX1ya_iJO8RUkS3f1InxZ-Hy32J7XetolbJXRSRzCk2c7yzjm6AgJ4kJpjM1tr-Nuetgp8Rzi3vpdRZfu-jBinofjB4itQn1g8j2QRzUmJF74GXcg3TXa1oib-jYTD6xyqGZWIMksl81-OFS4REW_TO1EvnnVaoax49AdFKnREUQ4C8ohVO0hd5VF4eAM5heiyBPO4_K5LSKDMRUg99MrBM82E005QvP2aKXPmxDwZ1XpSsha4bjwMeDdgFCOsmGL_7k35volitWh2jpwIlH4LkafgK0fG3dIBHcXPILSSFE-GwHqKYHKRTNsaWPNWt9NYZm9Bq40n5K6VWLBfwzti7kvG0xfb1uJvvA3DG0EBVE3UegM2EzHE04AyvYmeTx9hXH98RIgjjnoxrg_TeiHObqI5j60WblWcJuq1CiEDBfLqLP-PhUlOG2Hs8FSu1jt0JH6AlOGwOe5eke6hgUCby2P4XTgnQpOOYU56ivZzCpai0iJQIL299hz7fUjggHOH6xiE9DsBnRXLOjKx0rGdIbVOHLMixF4av1TdRosnb6BkAkEEXxhwqeltMFYdK--N8h5kos3L32f52hGQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Order 1",
+							"type": "text"
+						},
+						{
+							"key": "customer_name",
+							"value": "Demo customer 1",
+							"type": "text"
+						},
+						{
+							"key": "des",
+							"value": "asdasd",
+							"type": "text"
+						},
+						{
+							"key": "note",
+							"value": "asd",
+							"type": "text"
+						},
+						{
+							"key": "cart",
+							"value": "1:5,2:10",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/sumuh/Downloads/demo.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/agent/place-order",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"agent",
+						"place-order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Set delivery date and location by agent",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjEyMWY5MTNjMWY3ZWMyYmE2YzZhOWE1NTdmMDJhMjA5YWVmMGYzODZjNWI0YjlhNThjMDlhN2I5ZjU3MmNiODE1MzNlMWVhMmY0MTIxOTAiLCJpYXQiOjE2NzQ0OTA5MzguMDk0NTAxLCJuYmYiOjE2NzQ0OTA5MzguMDk0NTA1LCJleHAiOjE3MDYwMjY5MzcuODI1NTEzLCJzdWIiOiIxIiwic2NvcGVzIjpbImFnZW50cyJdfQ.ZH4MBxmVQiOVDzaeS2oEaOY_oDcrO0eOfbnnIL-i8v0xZJ1kvhk_nbkPfvPOy_ZBlRhk3Ds0a9Xms8SXUDKyzHRiE2bwjktxuFZP-01HtJae5HbV7c8_xB4ssW2ydNIUtz7u9jchC3Ydm8ht9-DPbe-ctEp6Epi04SO7s1ncPP8QsizLFIhWHLIkS0bdWeagP1JRmheM3P8nIc9dAMsG64YfY13HLUIE3EJjHZTeptb9U19BeHenLE9xn79xI7HxV8VoCer048dTLZdz48Q-RIdx3mRDI8tVtWe7TqymP-4uM3OCjQEOmcjNh0Afmi9tC5vQm22LJTAx_DgrRBuYjgdguZO4nypIuHOEqvzaRiSTfTYbfI5mEYjYuzl22aa-AwCZ_XRLvYjSA6EpKr9yWfb-enaxhA9XY0ra_pURthga4WK2Rz7INEqbN2Oq1R2Gmq3KQ7l1ow9rsZEij30pKZAka1Nt43J1PL-VSbWtu1SLb1MrIQm4TpNo0bXTlZqVbeT8n5XLR0A26N8_AVftX2eDSA6NwixdL7drTCt7ToT0hf1ftav6XQxH8SsT-jxuaaEq9cBl9uxTuArJjNqLdH7r5_XF4dZfWxcpqj2VuUzv5CLJMwPyi4S175gri5nMFRNzRqRQy4gjg2cMVn3r0t3Gn7FD_Ggvag4gQTMys_s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"delivery_date\": \"2023-01-23\",\r\n    \"delivery_location\": \"Dhaka, Bangladesh\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/agent/order/set-time-location/1",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"agent",
+						"order",
+						"set-time-location",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Set products prices by agent",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjEyMWY5MTNjMWY3ZWMyYmE2YzZhOWE1NTdmMDJhMjA5YWVmMGYzODZjNWI0YjlhNThjMDlhN2I5ZjU3MmNiODE1MzNlMWVhMmY0MTIxOTAiLCJpYXQiOjE2NzQ0OTA5MzguMDk0NTAxLCJuYmYiOjE2NzQ0OTA5MzguMDk0NTA1LCJleHAiOjE3MDYwMjY5MzcuODI1NTEzLCJzdWIiOiIxIiwic2NvcGVzIjpbImFnZW50cyJdfQ.ZH4MBxmVQiOVDzaeS2oEaOY_oDcrO0eOfbnnIL-i8v0xZJ1kvhk_nbkPfvPOy_ZBlRhk3Ds0a9Xms8SXUDKyzHRiE2bwjktxuFZP-01HtJae5HbV7c8_xB4ssW2ydNIUtz7u9jchC3Ydm8ht9-DPbe-ctEp6Epi04SO7s1ncPP8QsizLFIhWHLIkS0bdWeagP1JRmheM3P8nIc9dAMsG64YfY13HLUIE3EJjHZTeptb9U19BeHenLE9xn79xI7HxV8VoCer048dTLZdz48Q-RIdx3mRDI8tVtWe7TqymP-4uM3OCjQEOmcjNh0Afmi9tC5vQm22LJTAx_DgrRBuYjgdguZO4nypIuHOEqvzaRiSTfTYbfI5mEYjYuzl22aa-AwCZ_XRLvYjSA6EpKr9yWfb-enaxhA9XY0ra_pURthga4WK2Rz7INEqbN2Oq1R2Gmq3KQ7l1ow9rsZEij30pKZAka1Nt43J1PL-VSbWtu1SLb1MrIQm4TpNo0bXTlZqVbeT8n5XLR0A26N8_AVftX2eDSA6NwixdL7drTCt7ToT0hf1ftav6XQxH8SsT-jxuaaEq9cBl9uxTuArJjNqLdH7r5_XF4dZfWxcpqj2VuUzv5CLJMwPyi4S175gri5nMFRNzRqRQy4gjg2cMVn3r0t3Gn7FD_Ggvag4gQTMys_s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"1\": \"500\",\r\n    \"2\": \"1000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/agent/order/set-products-prices",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"agent",
+						"order",
+						"set-products-prices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Orders - Company",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYmFhZTkxNWFmYTMyZDJiMTU1NjcxOWU3NWM2YzVjMGE4ZDdiMTM1YWY4YjJlYTFkMGQ1MGIwOThmNjRmNjkxMjYxY2Q5NWYxZTkyZjA3OWYiLCJpYXQiOjE2NzQ0OTIwODIuODAzODYzLCJuYmYiOjE2NzQ0OTIwODIuODAzODY5LCJleHAiOjE3MDYwMjgwODIuNzY4NTgxLCJzdWIiOiIxIiwic2NvcGVzIjpbImNvbXBhbmllcyJdfQ.rDy0-JZJLOsGNE9jmsTufAtyAHS-vq2J_HjEQWeKiS_H9Z6jY-ORKK38yItfWxmC6vMKVLf-vlWH5VjGuwldZVDNuxBtLyNHSHiAgCUmcGjQ9mqd92TWCkJIbiHZDVJpJzuThVUUykAlDojGTpkgyxcFvbW0fhYbWaupWAF3RhvKXMH5_0qs8D_WvrNEmH3-YYa6hn98ZzNOqJqYzR5Aox6tlCcKjPVC81FEJgYd-v2ma9tQrV43ed9Y1Ubh4phFhndCWTCfRzgysQUe7vZH1LHjPGEZ7GuYSCyrjkQ3itY4uXIVtNQdxMblb0h4qJqSTpq_ILxeHsZ9-69i7W_p46iq6OJuGRCawPhnfhgUOQz9zFNqrcs2N9aoOuF8a0qMa3H0iEQ0aQEm-N3tCXeU1IC_hC58wzS8dteQZKEvNKQgSanqq5xBZb76mqLXswCFH2tkhRV6cZSmwxFh52BYeikp9Q2OqweliDvkgPvByAnHQilRr8LYZ-jhpqN0FTZG-mR4BPMsDrI7b64yXw1anaeI5AXV99kDnte7f0y2jywJGq9v8aEg3e2mTIvv_pqEnP4K28CWtV_RzkYH9xeaBFrEEjmsu3DJcWgM1leQhXInequu5IFSkTXlNBsN1iP1e-Kd99TEqjbvZXSc3s2G6hxkfmqdDPh0PNGIlgrk33E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/company/order",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"company",
+						"order"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Set Products Prices",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYmFhZTkxNWFmYTMyZDJiMTU1NjcxOWU3NWM2YzVjMGE4ZDdiMTM1YWY4YjJlYTFkMGQ1MGIwOThmNjRmNjkxMjYxY2Q5NWYxZTkyZjA3OWYiLCJpYXQiOjE2NzQ0OTIwODIuODAzODYzLCJuYmYiOjE2NzQ0OTIwODIuODAzODY5LCJleHAiOjE3MDYwMjgwODIuNzY4NTgxLCJzdWIiOiIxIiwic2NvcGVzIjpbImNvbXBhbmllcyJdfQ.rDy0-JZJLOsGNE9jmsTufAtyAHS-vq2J_HjEQWeKiS_H9Z6jY-ORKK38yItfWxmC6vMKVLf-vlWH5VjGuwldZVDNuxBtLyNHSHiAgCUmcGjQ9mqd92TWCkJIbiHZDVJpJzuThVUUykAlDojGTpkgyxcFvbW0fhYbWaupWAF3RhvKXMH5_0qs8D_WvrNEmH3-YYa6hn98ZzNOqJqYzR5Aox6tlCcKjPVC81FEJgYd-v2ma9tQrV43ed9Y1Ubh4phFhndCWTCfRzgysQUe7vZH1LHjPGEZ7GuYSCyrjkQ3itY4uXIVtNQdxMblb0h4qJqSTpq_ILxeHsZ9-69i7W_p46iq6OJuGRCawPhnfhgUOQz9zFNqrcs2N9aoOuF8a0qMa3H0iEQ0aQEm-N3tCXeU1IC_hC58wzS8dteQZKEvNKQgSanqq5xBZb76mqLXswCFH2tkhRV6cZSmwxFh52BYeikp9Q2OqweliDvkgPvByAnHQilRr8LYZ-jhpqN0FTZG-mR4BPMsDrI7b64yXw1anaeI5AXV99kDnte7f0y2jywJGq9v8aEg3e2mTIvv_pqEnP4K28CWtV_RzkYH9xeaBFrEEjmsu3DJcWgM1leQhXInequu5IFSkTXlNBsN1iP1e-Kd99TEqjbvZXSc3s2G6hxkfmqdDPh0PNGIlgrk33E",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"1\": \"400\",\r\n    \"2\": \"800\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/company/order/set-products-prices",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"company",
+						"order",
+						"set-products-prices"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://localhost:8000/api/v1",
+			"type": "string"
+		},
+		{
+			"key": "BASE_URL",
+			"value": "http://rodcem.com/api/v1",
+			"type": "string",
+			"disabled": true
+		}
+	]
+}
