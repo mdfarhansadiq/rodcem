@@ -12,7 +12,7 @@ class SuperAdminController extends Controller
 {
     public function index()
     {
-        $orders = Order::all()->paginate(20);
+        $orders = Order::all();
         return view('Dashboard.super', compact('orders'));
     }
 

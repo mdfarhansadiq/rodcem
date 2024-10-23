@@ -60,6 +60,26 @@ class PremiumFrontendController extends Controller
         return view('Premium.frontend.expert.expertByCategory', compact('experts', 'category_name'));
     }
 
+
+    public function search_expert_name_specific_category(Request $request)
+    {
+        $query = $request->input('search');
+        $experts = Expert::where('name', 'LIKE', "%{$query}%")->get();
+
+        // Return JSON response
+        return response()->json($experts);
+    }
+
+
+    public function search_expert_name_all_category(Request $request)
+    {
+        $query = $request->input('search');
+        $experts = Expert::with('expert_designation')->where('name', 'LIKE', "%{$query}%")->get();
+
+        // Return JSON response
+        return response()->json($experts);
+    }
+
     //shop
     public function shop()
     {

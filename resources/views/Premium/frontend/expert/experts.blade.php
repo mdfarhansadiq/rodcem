@@ -41,12 +41,23 @@
                         </span>
                     </div>
 
-                    <div class="search-box">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder=""
-                                aria-label="Example text with button addon">
-                            <button class="btn theme-bg-color text-white m-0" type="button"
-                                id="button-addon1">Search</button>
+                    <div class="container mt-5" style="max-width: 600px; margin: 0 auto;">
+                        <div class="search-box position-relative" style="position: relative; width: 100%;">
+                            <div class="input-group" style="display: flex;">
+                                <input type="text" id="expert-name-search" class="form-control"
+                                    placeholder="Search with the expert name..." aria-label="Search input"
+                                    style="border-radius: 0; box-shadow: none; border: 1px solid #ccc; flex-grow: 1;">
+                                <button class="btn theme-bg-color text-white m-0" type="button" id="button-addon1"
+                                    style="border-radius: 5px; background-color: #007bff; color: white;">Search</button>
+                            </div>
+
+                            <!-- Floating search results -->
+                            <div id="search-results-expert" class="search-results"
+                                style="display: none; position: absolute; top: 100%; left: 0; width: 100%; max-height: 300px; overflow-y: auto; background-color: #fff; border: 1px solid #ddd; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 10px; z-index: 1000;">
+                                <button id="close-results-expert" class="close-btnn"
+                                    style="position: absolute; top: 10px; right: 10px; background: none; border: none; font-size: 18px; cursor: pointer; font-weight: bold; color: #333;">x</button>
+                                <!-- Results will be injected here dynamically -->
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -116,4 +127,65 @@
         </div>
     </section>
     <!-- Product Section End -->
+@endsection
+@section('custom_js')
+    <script>
+        $(document).ready(function() {
+            $('#button-addon1').on('click', function() {
+                let query = $('#expert-name-search').val();
+
+
+                $.ajax({
+                    url: "{{ route('seach.expert.name.all.category') }}",
+                    type: 'GET',
+                    data: {
+                        search: query
+                    },
+                    success: function(response) {
+                        document.getElementById("search-results-expert").style.display =
+                        'block';
+
+                        let resultContainer = $('#search-results-expert');
+                        resultContainer.html(
+                            '<button id="close-results-expert" class="close-btn">x</button>'
+                        ); // Add close button
+                        resultContainer.show(); // Show the results section
+                        const assetUrl =
+                            "{{ asset('') }}"; // This will give you the base URL for your assets
+                        // Make sure this element exists in the view
+                        // resultContainer.html(''); // Clear previous results
+                        let hasResults = false;
+
+
+                        hasResults = true;
+                        resultContainer.append('<h3><b>Expert</b></h3>');
+                        response.forEach(function(expert) {
+
+                            let item = `<div class="card mt-2">
+                                            <div class="card-body">
+                                                <h5><a href="/expert/details/${expert.slug}" target="_blank">${expert.name} || ${expert.expert_designation.name}</a></h5>
+                                            </div>
+                                        </div>`;
+                            resultContainer.append(item);
+                        });
+
+
+                        if (hasResults == false) {
+                            resultContainer.append('<p>No results found</p>');
+                        }
+                    },
+                    error: function(error) {
+                        console.log('Error:', error);
+                    }
+                });
+
+
+            });
+
+            // Close button functionality
+            $(document).on('click', '#close-results-expert', function() {
+                $('#search-results-expert').hide(); // Hide the results section when close button is clicked
+            });
+        });
+    </script>
 @endsection
