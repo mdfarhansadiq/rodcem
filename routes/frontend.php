@@ -17,6 +17,8 @@ Route::get('/search/expert/name/specific/category', [PremiumFrontendController::
 Route::get('/search/expert/name/all/category', [PremiumFrontendController::class, 'search_expert_name_all_category'])->name('seach.expert.name.all.category');
 
 
+Route::get('/search/product/category', [PremiumFrontendController::class, 'search_product_category'])->name('search.product.category');
+
 //Registration
 Route::get('agent/register', [PremiumFrontendController::class, 'agent_register'])->name('agent.register');
 Route::get('expert/register', [PremiumFrontendController::class, 'expert_register'])->name('expert.register');

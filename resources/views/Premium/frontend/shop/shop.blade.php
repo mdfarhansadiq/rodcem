@@ -232,3 +232,49 @@
     </section>
     <!-- Shop Section End -->
 @endsection
+
+
+@section('custom_js')
+<script>
+    function performSearch() {
+    let query = document.getElementById('search-product-category').value;
+    let resultContainer = document.getElementById('search-results-product-category');
+
+    if (query.length > 2) {
+        fetch(`/search/product/category?query=${query}`, {
+            method: 'GET',
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            resultContainer.style.display = 'block'; // Show the result container
+            resultContainer.innerHTML = ''; // Clear previous results
+
+            if (data.length > 0) {
+                data.forEach(productCategory => {
+                    let item = `
+                        <div class="card mt-2">
+                            <div class="card-body">
+                                <h5><a href="/category/products/${productCategory.slug}" target="_blank">${productCategory.name}</a></h5>
+                            </div>
+                        </div>`;
+                    resultContainer.innerHTML += item;
+                });
+            } else {
+                resultContainer.innerHTML = '<p>No results found</p>';
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    } else {
+        resultContainer.style.display = 'none'; // Hide the result container when query is cleared
+    }
+}
+
+</script>
+
+
+@endsection

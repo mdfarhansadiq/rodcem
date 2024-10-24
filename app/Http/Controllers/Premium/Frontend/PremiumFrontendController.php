@@ -9,6 +9,7 @@ use App\Models\ExpertCategory;
 use App\Models\OurNews;
 use App\Models\Privacy;
 use App\Models\Product;
+use App\Models\ProductCategory;
 use App\Models\SliderBanner;
 use App\Models\TermsCondation;
 use Illuminate\Http\Request;
@@ -80,17 +81,56 @@ class PremiumFrontendController extends Controller
         return response()->json($experts);
     }
 
+
+    public function search_product_category(Request $request)
+    {
+        $query = $request->input('query');
+
+        // First, look for exact matches
+        $exactMatches = ProductCategory::where('name', $query)->get();
+
+        if ($exactMatches->isNotEmpty()) {
+            // If exact matches are found, return only them
+            return response()->json($exactMatches);
+        }
+
+        // If no exact matches, look for partial matches
+        $partialMatches = ProductCategory::where('name', 'LIKE', "%{$query}%")->get();
+
+        // Return JSON response with partial matches
+        return response()->json($partialMatches);
+    }
+
+
+    // public function search_product_category(Request $request)
+    // {
+    //     $query = $request->input('query');
+
+    //     // First, look for exact matches
+    //     $exactMatches = ProductCategory::where('name', $query)->get();
+
+    //     if ($exactMatches->isNotEmpty()) {
+    //         return response()->json($exactMatches);
+    //     }
+
+    //     // If no exact matches, look for partial matches
+    //     $partialMatches = ProductCategory::where('name', 'LIKE', "%{$query}%")->get();
+
+    //     return response()->json($partialMatches);
+    // }
+
+
     //shop
     public function shop()
     {
         $products = Product::inRandomOrder()->get();
-        return view('Premium.frontend.shop.shop',compact('products'));
+        return view('Premium.frontend.shop.shop', compact('products'));
     }
 
     //Product Details
     public function product_details($slug)
     {
-        return view('Premium.frontend.shop.productDetails',['item' => Product::where('slug',$slug)->first()]);
+        return view('Premium.frontend.shop.productDetails', ['item' => Product::where('slug', $slug)->first()]);
     }
 
     //companies
@@ -103,7 +143,7 @@ class PremiumFrontendController extends Controller
     //companies
     public function company_shop($slug)
     {
-        return view('Premium.frontend.company.company_shop', ['company' => Company::where('slug',$slug)->first()]);
+        return view('Premium.frontend.company.company_shop', ['company' => Company::where('slug', $slug)->first()]);
     }
 
     //Agent Regisration
@@ -151,11 +191,13 @@ class PremiumFrontendController extends Controller
     //Blog Details
     public function blog_details($slug)
     {
-        return view('Premium.frontend.blog.blogDetails',
-        [
-            'blog'  => OurNews::where('slug', $slug)->first(),
-            'blogs' => OurNews::where('slug', '!=',  $slug)->take(4)->get(),
-        ]);
+        return view(
+            'Premium.frontend.blog.blogDetails',
+            [
+                'blog'  => OurNews::where('slug', $slug)->first(),
+                'blogs' => OurNews::where('slug', '!=',  $slug)->take(4)->get(),
+            ]
+        );
     }
 
     // Experts
@@ -199,5 +241,4 @@ class PremiumFrontendController extends Controller
     {
         return view('Premium.frontend.returnPolicy');
     }
-
 }
