@@ -125,7 +125,7 @@
                                      </div>
 
                                      <!-- Floating search results -->
-                                     <div id="search-results" class="search-results" style="display: none">
+                                     <div id="search-results" class="search-results" style="display: none; border-radius: 10px;">
                                          <button id="close-results" class="close-btn" style="display: none">x</button> <!-- Close button -->
                                          <!-- Results will be injected here dynamically -->
                                      </div>

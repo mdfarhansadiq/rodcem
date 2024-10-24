@@ -511,6 +511,18 @@
                                 resultContainer.append(item);
                             })
                         }
+                        if (response.productcategories.length > 0) {
+                            hasResults = true;
+                            resultContainer.append('<h3><b>Product Categories</b></h3>');
+                            response.productcategories.forEach(function(productcateg) {
+                                let item = `<div class="card mt-2">
+                                                <div class="card-body">
+                                                    <h5><a href="/category/product/${productcateg.slug}" target="_blank">${productcateg.name}</a></h5>
+                                                </div>
+                                            </div>`;
+                                resultContainer.append(item);
+                            })
+                        }
 
                         if (hasResults == false) {
                             resultContainer.append('<p>No results found</p>');
@@ -536,5 +548,6 @@
 
 
 <!-- Mirrored from themes.pixelstrap.com/fastkart/front-end/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Nov 2022 08:49:18 GMT -->
+
 
 </html>

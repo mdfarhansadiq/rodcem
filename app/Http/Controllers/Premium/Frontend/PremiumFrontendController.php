@@ -43,10 +43,12 @@ class PremiumFrontendController extends Controller
         // Perform a search on the 'product' table (or your relevant model)
         $products = Product::where('name', 'LIKE', "%{$query}%")->get();
         $expertcategories = ExpertCategory::where('name', 'LIKE', "%{$query}%")->get();
+        $productcategories = ProductCategory::where('name', 'LIKE', "%{$query}%")->get();
 
         $allResults = [
             'products' => $products,
             'expertcategories' => $expertcategories,
+            'productcategories' => $productcategories,
         ];
         // Return JSON response
         return response()->json($allResults);
