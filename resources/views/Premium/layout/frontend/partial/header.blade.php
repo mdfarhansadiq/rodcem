@@ -120,7 +120,7 @@
                                              placeholder="I'm searching for..." aria-label="Search"
                                              aria-describedby="button-addon2">
                                          <button class="btn btn-primary" type="button" id="button-addon2">
-                                             <i data-feather="search"></i> Search
+                                             <i data-feather="search" disabled></i> Search
                                          </button>
                                      </div>
 

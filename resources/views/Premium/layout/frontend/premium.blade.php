@@ -463,9 +463,14 @@
 
     <script>
         $(document).ready(function() {
-            $('#button-addon2').on('click', function() {
+            $('#search-input').on('input', function() {
                 let query = $('#search-input').val();
 
+                
+                if (query.length === 0) {
+                    $('#search-results').hide(); // Hide results if input is empty
+                    return;
+                }
 
                 $.ajax({
                     url: "{{ route('search') }}",
