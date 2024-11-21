@@ -119,8 +119,8 @@
                                          <input type="search" id="search-input" class="form-control"
                                              placeholder="I'm searching for..." aria-label="Search"
                                              aria-describedby="button-addon2">
-                                         <button class="btn btn-primary" type="button" id="button-addon2">
-                                             <i data-feather="search" disabled></i> Search
+                                         <button class="btn btn-primary" type="button" id="button-addon2" disabled>
+                                             <i data-feather="search"></i> Search
                                          </button>
                                      </div>
 
