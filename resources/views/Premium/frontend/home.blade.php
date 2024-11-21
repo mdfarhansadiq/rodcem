@@ -809,9 +809,9 @@
     <!-- Product Section End -->
     <!-- Blog Section Start -->
     <section>
-        <div class="container-fluid-lg">
+        <div class="container" style="text-align: center; border: 1px solid #000; border-radius: 10px; padding: 20px; box-shadow: 5px 5px;">
             <div class="title">
-                <h2>Video Gallery</h2>
+                <h2 style="">Video Gallery</h2>
                 <span class="title-leaf">
                     <svg class="icon-width">
                         <use xlink:href="https://themes.pixelstrap.com/fastkart/assets/svg/leaf.svg#leaf"></use>
@@ -821,7 +821,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="slider-5 ratio_87">
-                        @foreach (videos() as $item )
+                        @foreach (videos() as $item)
                             <div>
                                 <div class="video_box">
                                     <div class="blog-box">

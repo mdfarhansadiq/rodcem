@@ -28,13 +28,21 @@ class videoController extends Controller
     {
         //
     }
-
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    protected function getYouTubeVideoId($url)
+    {
+        if (preg_match('/(youtu\.be\/|v=|\/embed\/|\/v\/|watch\?v=|&v=)([^#&?]*).*/', $url, $matches)) {
+            return $matches[2]; // Extract the video ID
+        }
+        return null;
+    }
+
+
     public function store(Request $request)
     {
 
@@ -43,7 +51,10 @@ class videoController extends Controller
             'image' => 'required'
         ]);
 
+
         $category = Video::Create($request->all());
+        $category->link = 'https://www.youtube.com/embed/' . $this->getYouTubeVideoId($request->input('link'));
+
         if ($request->hasFile('image')) {
             $image    = $request->file('image');
             $name     = 'video-thumbnail-' . uniqid(50) . '.' . $image->getClientOriginalExtension();
@@ -93,6 +104,11 @@ class videoController extends Controller
 
         $category = Video::where('id', $id)->first();
         $category->update($request->all());
+        $link = $this->getYouTubeVideoId($request->input('link'));
+        if(($link) != null) {
+            $category->link = 'https://www.youtube.com/embed/' . $link;
+        }
+
         if ($request->hasFile('image')) {
             $image    = $request->file('image');
             $name     = 'video-thumbnail-' . uniqid(50) . '.' . $image->getClientOriginalExtension();
