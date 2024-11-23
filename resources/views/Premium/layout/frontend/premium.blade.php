@@ -127,6 +127,161 @@
             transform: scale(1.1);
             box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
         }
+
+
+
+        /* Container Styling */
+        .product-border {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Product Box */
+        .product-box {
+            position: relative;
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            margin: 5px;
+            /* Add size modifications */
+            /* width: 400px; */
+            /* Set desired width */
+            height: 400px;
+            /* Set desired height */
+        }
+
+        .product-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Product Image */
+        .product-image img {
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+            transition: transform 0.3s ease;
+        }
+
+        .product-box:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        /* Product Options */
+        .product-option {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            gap: 10px;
+            list-style: none;
+        }
+
+        .product-option li {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .product-option li:hover {
+            background: #0da487;
+            /* WhatsApp green */
+            color: #fff;
+        }
+
+        /* Product Details */
+        .product-detail {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .product-detail .name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+            transition: color 0.3s;
+        }
+
+        .product-detail .name:hover {
+            color: #007bff;
+            /* Highlight on hover */
+        }
+
+        .product-detail .sold {
+            font-size: 16px;
+            font-weight: bold;
+            color: #0da487;
+            /* Green pricing */
+        }
+
+        .product-detail .offer {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .product-detail a {
+            color: #fff;
+        }
+
+        /* Add to Cart Button */
+        .add-to-cart-box {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .add-to-cart-box a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background: linear-gradient(45deg, #0da487, #28a745);
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .add-to-cart-box a:hover {
+            background: linear-gradient(45deg, #28a745, #0da487);
+            transform: scale(1.1);
+        }
+
+        .add-to-cart-box a span {
+            margin-left: 10px;
+            font-size: 18px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media (max-width: 768px) {
+            .product-box {
+                margin-bottom: 20px;
+            }
+
+            .product-option {
+                gap: 5px;
+            }
+
+            .add-to-cart-box a {
+                font-size: 14px;
+                padding: 8px 15px;
+            }
+        }
     </style>
     @yield('custom_css')
 </head>

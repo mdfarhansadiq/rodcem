@@ -18113,7 +18113,7 @@ header .offcanvas-backdrop {
 }
 
 .product-box-3 .product-header .product-image .product-option li a {
-    color: #222
+    color: #fff
 }
 
 .product-box-3 .product-header .product-image .product-option li a .feather {
@@ -18226,11 +18226,11 @@ header .offcanvas-backdrop {
 }
 
 .product-box-3 .product-footer .product-detail a {
-    color: #222
+    color: #fff
 }
 
 .product-box-3 .product-footer .product-detail a:hover {
-    color: #222
+    color: #fff
 }
 
 .product-box-3 .product-footer .product-detail .name {
