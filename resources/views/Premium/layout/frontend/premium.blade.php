@@ -54,6 +54,79 @@
             font-weight: bold;
             color: #ff0000;
         }
+
+
+        /* WhatsApp Button Styles */
+        .whatsapp-chat {
+            position: fixed;
+            bottom: 130px;
+            right: 70px;
+            display: flex;
+            align-items: center;
+            background-color: #25d366;
+            /* WhatsApp green */
+            color: white;
+            padding: 10px 15px;
+            border-radius: 50px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            z-index: 1000;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* WhatsApp Icon */
+        .whatsapp-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            color: #25d366;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        /* WhatsApp Button Hover Effects */
+        .whatsapp-chat:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+            color: #fff;
+        }
+
+
+
+        /* Back-to-Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 90px;
+            /* Place above WhatsApp button */
+            right: 20px;
+            z-index: 999;
+            /* Ensure it's visible but below WhatsApp button */
+        }
+
+        .back-to-top a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            /* background-color: #333; */
+            color: #fff;
+            /* border-radius: 50%; */
+            text-decoration: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .back-to-top a:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        }
     </style>
     @yield('custom_css')
 </head>
@@ -438,6 +511,14 @@
                 </div>
             </div>
         </div> --}}
+        <a href="https://wa.link/tw0mt2" target="_blank" class="whatsapp-chat">
+            <div class="whatsapp-icon">
+                <i class="fa fa-whatsapp"></i>
+            </div>
+            <span class="whatsapp-text">Chat with us</span>
+        </a>
+
+
 
         <div class="back-to-top">
             <a id="back-to-top" href="#">
@@ -466,7 +547,7 @@
             $('#search-input').on('input', function() {
                 let query = $('#search-input').val();
 
-                
+
                 if (query.length === 0) {
                     $('#search-results').hide(); // Hide results if input is empty
                     return;
