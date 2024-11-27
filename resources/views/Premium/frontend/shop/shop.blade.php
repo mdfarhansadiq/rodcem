@@ -112,7 +112,7 @@
                                                                                 <div class="right-sidebar-modal">
                                                                                     <h4 class="title-name">{{ $item->name }}
                                                                                     </h4>
-                                                                                    <h4 class="price theme-color"><i class="fa fa-turkish-lira"></i>
+                                                                                    <h4 class="price theme-color"><i class="fa-solid fa-bangladeshi-taka-sign"></i>
                                                                                         @if (view_action() == 'view_right')
                                                                                             {{ $item->price }}
                                                                                         @else
@@ -171,7 +171,7 @@
                                             </a>
                                             {{-- <p class="text-content mt-1 mb-2 product-content" style="line-clamp:1">{!!$item->short_description!!}</p> --}}
                                             <h5 class="price theme-color">
-                                                <i class="fa fa-turkish-lira"></i>
+                                                <i class="fa-solid fa-bangladeshi-taka-sign"></i>
                                                 @if (view_action() == 'view_right')
                                                     {{ $item->price }}
                                                 @else
@@ -203,29 +203,14 @@
                         @endforeach
                     </div>
 
-                    <nav class="custome-pagination">
-                        <ul class="pagination justify-content-center">
-                            <li class="page-item disabled">
-                                <a class="page-link" href="javascript:void(0)" tabindex="-1" aria-disabled="true">
-                                    <i class="fa-solid fa-angles-left"></i>
-                                </a>
-                            </li>
-                            <li class="page-item active">
-                                <a class="page-link" href="javascript:void(0)">1</a>
-                            </li>
-                            <li class="page-item" aria-current="page">
-                                <a class="page-link" href="javascript:void(0)">2</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="javascript:void(0)">3</a>
-                            </li>
-                            <li class="page-item">
-                                <a class="page-link" href="javascript:void(0)">
-                                    <i class="fa-solid fa-angles-right"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
+
+                            <ul class="pagination justify-content-center">
+                                <nav class="custome-pagination">
+                                    {!! $products->links('pagination::bootstrap-4') !!}
+                                </nav>
+                            </ul>
+
+
                 </div>
             </div>
         </div>

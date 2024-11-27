@@ -21,7 +21,7 @@ class PremiumFrontendController extends Controller
     public function front()
     {
         $products     = Product::latest()->get();
-        $six_products = Product::latest()->take(6)->get();
+        $six_products = Product::latest()->take(8)->get();
 
         $bestseller = Product::inRandomOrder()->take(12)->get();
         $best_seller_product = [];
@@ -125,7 +125,7 @@ class PremiumFrontendController extends Controller
     //shop
     public function shop()
     {
-        $products = Product::inRandomOrder()->get();
+        $products = Product::inRandomOrder()->paginate(10);
         return view('Premium.frontend.shop.shop', compact('products'));
     }
 
