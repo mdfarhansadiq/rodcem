@@ -19,6 +19,9 @@ class SuperAdmin extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'google_id',
+        'google_token',
+        'google_refresh_token',
         'password',
     ];
 

@@ -234,8 +234,10 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 
 //Super Login
-Route::get('super/login', [SuperLoginController::class, 'showLoginForm'])->name('Super.login')->middleware('guest');
+Route::get('admin/super/login', [SuperLoginController::class, 'showLoginForm'])->name('super.login')->middleware('guest');
 Route::post('super/login', [SuperLoginController::class, 'login'])->name('Super.login.submit')->middleware('guest');
+Route::get('auth/google', [SuperLoginController::class, 'redirectToGoogle'])->name('super.google.login')->middleware('guest:super');
+Route::get('auth/google/callback', [SuperLoginController::class, 'handleGoogleCallback'])->name('super.google.callback')->middleware('guest:super');
 
 //Super prefix
 Route::prefix('super')->middleware('super')->group(function () {
